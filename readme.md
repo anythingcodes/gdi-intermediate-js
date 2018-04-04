@@ -1,44 +1,69 @@
-# JavaScript 201: Intermediate JavaScript
+# Getting Started with ES6 and ES7 JavaScript
 
-Slides and materials are hosted at [http://gdila.org/js201](http://gdila.org/js201).
+Materials and slides for a Girl Develop It ES6 JavaScript course. Includes ES7's minor additions.
 
-## Course description
+[View Slides](http://anything.codes/gdi-es6-javascript) | [View Meetup Description](resources/meetup-description.md)
 
-Take your JavaScript skills to the next level with this class, which will build on skills learned in JavaScript 101 and take those skills to new and deeper levels.
+### Got a pull request?
 
-**Cost: $90**
+Pull requests are encouraged. Do your part to help us keep this curriculum up-to-date and relevant!
 
-**Dates: April 23 and April 30, 2016**
-
-**Location: Opodz in Little Tokyo**
-
-A limited number of scholarships are available for those with a financial hardship. To apply, contact us at...
-
-
-### Prerequisites:
-
-List any prerequisites for this class, including any previous classes or the equivalent self-study or real-world skills.
-
-You should have:
-
-(a) taken HTML/CSS 101: Introduction to HTML and CSS with Girl Develop It or have equivalent knowledge,
-
-(b) taken JavaScript 101: Introduction to JavaScript through Girl Develop It, or be familiar with JavaScript syntax, variables, arrays, conditionals, for and while loops, objects, event handling and DOM manipulation.
+### Table of Contents
+1. [Details for Course Organizers](#details-for-course-organizers)
+    1. [Meetup Content](#meetup-content)
+2. [Details for Instructors](#details-for-instructors)
+    1. [Compiling Slides and Running Locally](#compiling-slides-and-running-locally)
+    2. [Teaching Recommendations](#teaching-recommendations)
+    3. [Instructor Notes](#instructor-notes)
+    4. [How to Use Reveal.js Slides](#how-to-use-revealjs-slides)
 
 
-### Tech requirements:
-
- - Your laptop (Mac, PC, or Linux are all okay).
- - A modern web browser - we recommend Google Chrome
- - A text editor. We recommend Sublime Text
+---
 
 
-### Topics covered:
+## Details for Course Organizers
 
- - Variables, including scope, local variables, global variables, and the this keyword. This is a review and a deeper dive into variables than we covered in 101
- - Arrays, including join, map, and filter functions. Again, this is a review and then a deeper dive than covered in 101
- - Functions, including function declarations, function expressions, hoisting, IIFEs, arguments, this, closures and the bind, apply, and call methods. A review of what we know already, then a deeper look at functions.
- - Objects, including different ways to create objects, the built-in objects and the global object. A review of what we learned in 101, then a deeper look at objects.
- - Object-oriented JavaScript, including prototypes and inheritance
- - Advanced DOM Manipulation, including event delegation
- - Ajax and JSON - including how to make asynchronous calls, parse JSON responses, and update the UI
+| Slides | Hours | Format | Content Creator | Additional Notes |
+| ----- |:-----:| -----:| -----:| -----:|
+| [View](http://anything.codes/gdi-es6-javascript) | 8 | Four 2-hour classes | [@anythingcodes](http://github.com/anythingcodes) | Print cheatsheets for each class — PDFs can be found in the [`/resources/cheatsheets`](/resources/cheatsheets) directory. Originally run for GDI Boston. |
+
+
+##### Meetup Content
+
+| Title | Suggested Cost | Suggested # of TAs | Meetup Description | Example URLs |
+| ----- |:-----:| -----:| -----:| -----:| 
+| Getting Started with ES6 JavaScript | $90/student | 2 (potentially 3 for final class activity) |  [View](resources/meetup-description.md) | [View](https://www.meetup.com/Girl-Develop-It-Boston/events/239315429/) |
+
+---
+
+## Details for Instructors
+
+### Compiling Slides and Running Locally
+
+1. Install [Node.js](https://nodejs.org) (v6)
+2. Run `npm install` from this repository's directory
+3. Run `gem install sass` to install Sass. Note: You will need to [download Ruby](https://www.ruby-lang.org/en/documentation/installation) to run this `gem` command.
+4. Run `grunt` from this repository's directory to compile files. A window will open with the slides running locally. Any changes will automatically refresh.
+
+Make CSS changes to the source files, **not** the compiled CSS files (i.e. **not** those in `/dist`). Source files can be found in `/src/css` as `.scss` files.
+
+### Teaching Tips and Recommendations
+
+- Slide-specific notes can be found in presenter mode. To enter presenter mode, press the `S` key when viewing the slides in a browser.
+- All CodePen solutions have a class of `solution solution__lesson-X` where X is the lesson number (1, 2, or 3) and are hidden from the slides by default. When you're ready to reveal solutions for a given class, uncomment out `display: inline;` in the `src/css/theme/source/gdidarkblue.scss` file. Typically solutions are revealed after each lesson ends.
+
+### How to Use Reveal.js Slides
+
+**Key Functions:**
+- Enter speaker view by pressing `s`
+- View PDF/print mode by going to `http://yourslidesurl/?print-pdf` 
+
+**Additional Info:**
+
+Please read our slide creation guidelines in [the wiki](https://github.com/girldevelopit/gdi-slides-template/wiki). Be sure to make your course's content as reusable as possible &mdash; remove any information about yourself or your chapter.
+
+
+
+
+
+

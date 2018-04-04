@@ -12,13 +12,13 @@
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+		<link rel="stylesheet" href="dist/css/reveal.css">
+		<link rel="stylesheet" href="dist/css/gdidarkblue.css" id="theme">
 
 		<!-- For syntax highlighting -->
-		<!-- light editor --><link rel="stylesheet" href="lib/css/light.css">
-		<!-- dark editor <link rel="stylesheet" href="lib/css/dark.css">-->
-		<!-- <link rel="stylesheet" href="lib/css/zenburn.css"> -->
+		<!-- light editor --><link rel="stylesheet" href="dist/css/light.css">
+		<!-- dark editor <link rel="stylesheet" href="dist/css/dark.css">-->
+		<!-- <link rel="stylesheet" href="dist/css/zenburn.css"> -->
 
 		<link rel="stylesheet" href="plugin/accessibility-helper/css/accessibility-helper.css">
 
@@ -28,14 +28,14 @@
 				var link = document.createElement( 'link' );
 				link.rel = 'stylesheet';
 				link.type = 'text/css';
-				link.href = 'css/print/pdf.css';
+				link.href = 'dist/css/print/pdf.css';
 				document.getElementsByTagName( 'head' )[0].appendChild( link );
 			}
 		</script>
 
 		<!-- If use the PDF print sheet so students can print slides-->
 
-		<link rel="stylesheet" href="css/print/pdf.css" type="text/css" media="print">
+		<link rel="stylesheet" href="dist/css/print/pdf.css" type="text/css" media="print">
 		<link rel="icon" type="image/x-icon" href="favicon.ico" />
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
@@ -50,7 +50,7 @@
 			<div class="slides">
 				<!-- Opening -->
 				<section>
-					<img src="img/circle-gdi-logo.png" alt="GDI Logo" class="noborder"/>
+					<img src="dist/img/gdi.jpg" alt="GDI Logo" class="noborder"/>
 					<h1>JavaScript 201</h1>
 					<h2>Class 1: Variables, Arrays, and Objects</h2>
 					<p>
@@ -61,9 +61,7 @@
 				<!-- Wifi and links -->
 				<section>
 					<h3>JavaScript 201</h3>
-					<p>Wifi network: Opodz Members</p>
-					<p>Wifi password: opodz888</p>
-					<p>&nbsp;</p>
+					
 					<h3>Class Slides</h3>
 					<p><a href="http://gdila.org/js201">gdila.org/js201</a></p>
 				</section>
@@ -71,7 +69,6 @@
 				<!-- Sponsors -->
 				<section>
 					<h1>Thank You</h1>
-					<p><img src="img/opodz-logo.jpg" height="210" width="585" alt=""></p>
 				</section>
 
 				<!-- GDI Rules -->
@@ -529,7 +526,7 @@ for(var key in zoo) {
 
 				<section>
 					<h3>Nested Objects</h3>
-					<img src="img/nesting.png" height="359" width="705" alt="" style="max-height:300px;width:auto;">
+					<img src="dist/img/nesting.png" height="359" width="705" alt="" style="max-height:300px;width:auto;">
 <pre><code class="javascript">var doll = {
 	size: 'large',
 	innerDoll: { size: 'medium'}
@@ -566,8 +563,8 @@ console.log(doll);</code></pre>
 		</div>
 
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
+		<script src="dist/js/head.min.js"></script>
+		<script src="dist/js/reveal.min.js"></script>
 
 		<script>
 
