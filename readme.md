@@ -1,6 +1,6 @@
-# Getting Started with ES6 and ES7 JavaScript
+# Intermediate JavaScript
 
-Materials and slides for a Girl Develop It ES6 JavaScript course. Includes ES7's minor additions.
+Materials and slides for a Girl Develop It Intermediate JavaScript course.
 
 [View Slides](http://anything.codes/gdi-es6-javascript) | [View Meetup Description](resources/meetup-description.md)
 
@@ -25,14 +25,14 @@ Pull requests are encouraged. Do your part to help us keep this curriculum up-to
 
 | Slides | Hours | Format | Content Creator | Additional Notes |
 | ----- |:-----:| -----:| -----:| -----:|
-| [View](http://anything.codes/gdi-es6-javascript) | 8 | Four 2-hour classes | [@anythingcodes](http://github.com/anythingcodes) | Print cheatsheets for each class — PDFs can be found in the [`/resources/cheatsheets`](/resources/cheatsheets) directory. Originally run for GDI Boston. |
+| [View](http://anything.codes/gdi-intermediate-js) | 4 | Two 2-hour classes | [@anythingcodes](http://github.com/anythingcodes) | Print cheatsheets for each class — PDFs can be found in the [`/resources/cheatsheets`](/resources/cheatsheets) directory. Originally run for GDI Boston. |
 
 
 ##### Meetup Content
 
 | Title | Suggested Cost | Suggested # of TAs | Meetup Description | Example URLs |
 | ----- |:-----:| -----:| -----:| -----:| 
-| Getting Started with ES6 JavaScript | $90/student | 2 (potentially 3 for final class activity) |  [View](resources/meetup-description.md) | [View](https://www.meetup.com/Girl-Develop-It-Boston/events/239315429/) |
+| Intermediate JavaScript | $36/student | 2 |  [View](resources/meetup-description.md) | [View](https://www.meetup.com/Girl-Develop-It-Boston/events/250065977/) |
 
 ---
 
