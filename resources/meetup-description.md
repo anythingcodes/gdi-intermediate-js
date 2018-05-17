@@ -1,8 +1,6 @@
-# Getting Started with ES6 JavaScript
+# Intermediate JavaScript
 
-ES6 is a radical jump forward for the JavaScript language. With tons of new features, ES6 offers additional capabilities and will drastically reduce the amount of code you need to get things done. Through hands-on coding exercises, we'll use ES6 in practical, everyday situations and learn how to integrate ES6 with your current workflow.
-
-Using ES6 gives you an edge in the web development industry, since it's used heavily in popular modern frameworks such as React.js, Angular 2, and Vue.js. If you haven't learned ES6 yet, now is your chance!
+If you've completed Intro to JS and are ready for the next level, join us for a dive into the more advanced aspects of JavaScript! Now that you have a basic understanding of programming and JavaScript fundamentals, it's time to get down with some true DOM manipulation. Use those loops, objects, conditional statements and more to turn your web pages into interactive sites. In this four hour, two part course, we'll start building and debugging a true web-based application with dynamic, interactive content.
 
 ## Dates
 
@@ -12,41 +10,26 @@ This class takes place over the following dates:
 
 **Day, Month Xth, H:MM - H:MM tt**
 
-**Day, Month Xth, H:MM - H:MM tt**
-
-**Day, Month Xth, H:MM - H:MM tt**
-
 Your payment registers you for the entire series.
-
-## Takeaways
-
-- Learn ES6 syntax and use it in practical, everyday situations through coding exercises
-- Convert current/ES5 code into ES6, step by step
-- Write organized, more professional JavaScript that's easier for other developers to read and understand
-- Work with the major new features of ES6 (including new variable types, Array helpers, arrow functions, string templates, generators, promises, classes, rest/spread operators, and more!)
-- Review ES7's two new features
-- Discuss how to integrate ES6 into existing projects or start new ES6 projects
-- Learn about tools that will help you and your team reinforce best JavaScript practices
-- Never use a `for` loop again!
 
 ## Prerequisites
 
-**Required:** A working understanding of JavaScript is required. You should be familiar with basic JavaScript syntax, functions, objects and arrays, conditionals, for and while loops, AJAX requests, and handling JSON responses.
+You should understand programming basics like variables, data types, loops and conditional statements. You also are very familiar with the anatomy of the DOM. Your HTML & CSS skills are fairly advanced and you have no problem writing a quick CSS selector to change the font size of each paragraph on the page. Your JavaScript-specific experience is still pretty beginner, though. You may have dabbled in some DOM manipulation, experimented with vanilla JavaScript, or even done a bit of jQuery on your own, but working with JavaScript is still pretty new to you.
 
- If you have any questions about requirements, please post a comment or message the organizers. We're happy to help!
+This class is intended for JavaScript beginners who haven't yet done too much with DOM manipulation or who'd like to use JavaScript for common, everyday projects.
 
-_Note: All attendees are expected to abide by the [Girl Develop It Code of Conduct](http://www.girldevelopit.com/codeofconduct)._
-
+If you have any questions about requirements, please post a comment or message the organizers. We're happy to help!
 
 ## Tech Requirements
 
 Please bring a laptop and charger to each class. Your laptop should have the following installed:
+- Google Chrome (https://www.google.com/chrome/browser/desktop/) for viewing our work and using Chrome's Developer Tools
+- A text editor such as VS Code (https://code.visualstudio.com/), Atom (http://atom.io/) or Sublime Text (http://www.sublimetext.com/2) (both free; available for Mac, PC, and Linux)
 
-- [Node.js](http://nodejs.org) version 6
-- Google Chrome
-- A text editor such as [Sublime Text](http://www.sublimetext.com/2) or [Atom](http://atom.io) (both free; available for Mac, PC, and Linux)
+## What to Bring
+- Laptop (Mac, PC, or Linux are all okay) and charger
 
-### Instructor
+## Instructor
 
 This course will be taught by <span style="color:red;">Instructor Name Here</span>.
 
@@ -58,7 +41,7 @@ This course will be taught by <span style="color:red;">Instructor Name Here</spa
 
 <span style="color:red;">TA Name(s) Here</span> will TA this class.
 
-### Location
+## Location
 
 A huge thank you to <span style="color:red;">Company Name Here</span> for hosting this event! <span style="color:red;">Company Name Here</span> is located at:
 
@@ -67,3 +50,12 @@ A huge thank you to <span style="color:red;">Company Name Here</span> for hostin
 [View map](#)
 
 <img src="http://placehold.it/300x75" alt="CompanyName logo" />
+
+## Notes
+
+- All attendees are expected to abide by the [Girl Develop It Code of Conduct](http://www.girldevelopit.com/codeofconduct).
+- Please be advised that photographs may be taken at the event. By attending this event, you consent that your photograph may be taken.
+
+## Refunds
+
+We are not able to offer refunds unless the class is cancelled.
