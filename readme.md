@@ -11,11 +11,11 @@ Pull requests are encouraged. Do your part to help us keep this curriculum up-to
 ### Table of Contents
 1. [Details for Course Organizers](#details-for-course-organizers)
     1. [Meetup Content](#meetup-content)
-2. [Details for Instructors](#details-for-instructors)
+2. [Syllabus](#syllabus)
+3. [Details for Instructors](#details-for-instructors)
     1. [Compiling Slides and Running Locally](#compiling-slides-and-running-locally)
     2. [Teaching Recommendations](#teaching-recommendations)
-    3. [Instructor Notes](#instructor-notes)
-    4. [How to Use Reveal.js Slides](#how-to-use-revealjs-slides)
+    3. [How to Use Reveal.js Slides](#how-to-use-revealjs-slides)
 
 
 ---
@@ -33,6 +33,63 @@ Pull requests are encouraged. Do your part to help us keep this curriculum up-to
 | Title | Suggested Cost | Suggested # of TAs | Meetup Description | Example URLs |
 | ----- |:-----:| -----:| -----:| -----:| 
 | Intermediate JavaScript | $36/student | 2 |  [View](resources/meetup-description.md) | [View](https://www.meetup.com/Girl-Develop-It-Boston/events/250065977/) |
+
+---
+
+## Syllabus
+
+### Takeaways
+
+1. DOM Manipulation:
+    - Use loops, objects, and conditionsals to make a site interactive
+2. Build and debug a web-based application
+3. Use JavaScript for common, everyday situations
+4. Develop a deeper JS foundation to apply that knowledge to modern JS frameworks
+
+### Content
+
+1. *Introductions*
+2. *Review*
+    - Objects: Syntax & accessing data
+    - Arrays: Syntax & accessing data
+3. *Debugging*
+    - Exploring Chrome's Developer Info console
+    - Breakpoints
+    - Pseudocoding
+4. *Hoisting & Scope*
+    - Global scope versus local scope
+    - The meaning of `this`
+    - Closures
+    - IIFEs
+5. *Functions*
+    - Function expression vs. declaration
+    - Using callback functions
+6. *DOM Manipulation*
+    - `document` and `window` objects
+    - Querying the DOM
+7. *Forms*
+    - Retrieving values of form elements
+    - `preventDefault()`
+8. *AJAX*
+    - Synchronous vs. asynchronous
+    - JSON
+    - jQuery and other libraries
+9. *Promises*
+    - States of a promise
+    - Fetch
+    - Polyfills and shims
+10. *Object-Oriented Programming*
+    - What is it?
+    - Prototypal inheritance
+    - Class-based inheritance
+11. What's next?
+    - ES6
+    - Build your own API
+    - Understanding API documentation: List.js, Google Maps, etc.
+
+
+
+
 
 ---
 
