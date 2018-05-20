@@ -1,18 +1,21 @@
-// Instantiate variables
-var myNumber = 20;
-var totalFunctionsCalled = 0;
+(function() {
 
-function firstFunction() {
-  // Increment (add one to) totalFunctionsCalled
-  totalFunctionsCalled++;
-  // Call secondFunction
-  secondFunction();
-}
+  // Instantiate variables
+  var myNumber = 20;
+  var totalFunctionsCalled = 0;
 
-function secondFunction() {
-  // Increment totalFunctionsCalled
-  totalFunctionsCalled++;
-}
+  function firstFunction() {
+    // Increment (add one to) totalFunctionsCalled
+    totalFunctionsCalled++;
+    // Call secondFunction
+    secondFunction();
+  }
 
-// Call firstFunction to start the chain of events
-firstFunction();
+  function secondFunction() {
+    // Increment totalFunctionsCalled
+    totalFunctionsCalled++;
+  }
+
+  // Call firstFunction to start the chain of events
+  firstFunction();
+})();
