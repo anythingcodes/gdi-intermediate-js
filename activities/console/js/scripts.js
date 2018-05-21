@@ -1,6 +1,6 @@
 // Define an object with various properties.
 var myObject = {
-  info: 3.14159,
+  number: 3.14159,
   warnMe: function() {
       return 'warning message'
   },
@@ -13,35 +13,17 @@ var myObject = {
 };
 
 // Show different console methods and how to use object properties.
+
+// Several console log statements
 console.log(myObject);
-console.info(myObject.info);
+console.log(myObject.number);
+console.log(myObject.arr);
+
+// Console warning statement
 console.warn(myObject.warnMe());
+
+// Console error statement
 console.error(myObject.error.message);
+
+// Console table statement
 console.table(myObject.arr);
-
-var testLoop = function() {
-  // In a console group, loop.
-  console.group('loopGroup');
-  for (var i = 0; i < 20; i++) {
-      if (i == 5) {
-          // Explicit breakpoint.
-          // debugger;
-          logFive();
-      } else if (i == 12) {
-          // This will break.
-          logTwelve();
-      }
-  }
-  console.groupEnd();
-};
-testLoop();
-
-// Function expression
-var logTwelve = function() {
-  console.log('twelve!');
-};
-
-// Function declaration
-function logFive() {
-  console.log('fiver');
-};
