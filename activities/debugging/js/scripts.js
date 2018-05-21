@@ -1,6 +1,6 @@
 // Instantiate variables
-var totalFunctionsCalled = 0;
 var myNumber = 20;
+var totalFunctionsCalled = 0;
 var myArray = ['Ada', 'Aja'];
 
 function firstFunction() {
