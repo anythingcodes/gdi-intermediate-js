@@ -167,6 +167,20 @@ h1, h2, h3, h4, h5, h6 {
   .reveal.has-light-background footer a, .reveal.has-light-background footer .toc-accordion label, .reveal.has-dark-background footer a, .reveal.has-dark-background footer .toc-accordion label {
     color: #fff; }
 
+/* Highlighted areas */
+.reveal .highlight {
+  border: 1px solid rebeccapurple;
+  background-color: rgba(102, 51, 153, 0.16);
+  padding: .5em .25em; }
+.reveal .shadow {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
+.reveal .inline-icon {
+  height: 1em;
+  margin: 0;
+  line-height: 0;
+  display: inline-block;
+  vertical-align: text-bottom; }
+
 .reveal footer .copyright {
   margin: 7px 9px 0 12%; }
 

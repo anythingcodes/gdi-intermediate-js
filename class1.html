@@ -114,17 +114,16 @@
         <section>
 					<h2>First Things First</h2>
 					<h3>Course Format</h3>
-					<ul class="small">
+					<ul class="" style="white-space: nowrap;">
 						<li>In-Class Activities</li>
-						<!-- <li>At-Home Challenges</li> -->
-						<li>Course Website: <a href="http://anything.codes" target="_blank">http://anything.codes</a></li>
+						<li>Class Project</li>
 						<li>Slides: <a href="http://tiny.cc/gdi-js" target="_blank">http://tiny.cc/gdi-js</a></li>
 					</ul>
 					<p>&nbsp;</p>
 					<p><span class="orange">Need help?</span><br />Note the resources on the whiteboard</p>
 					<p><strong>Thank you to our wonderful TAs!</strong></p>
 					<aside class="notes">
-            Point out "Table of Contents" in bottom to help navigate from slide to slide.
+            Point out "Table of Contents" in bottom to help navigate from slide to slide. The green slides are activities.
           </aside>
         </section>
         
@@ -132,43 +131,45 @@
         <!-- Get Started -->
         <section>
           <h3>Get Started: Tools</h3>
-          <p>We'll be using the following tools in class today:</p>
-          <p>&nbsp;</p>
-          <ul style="font-size: 90%;">
-              <li>
-                  <div class="orange"><strong>Browser</strong>
-                  </div>
-                  <ul>
-                      <li><a href="https://www.google.com/chrome/browser/" target="_blank" class="roll"><span data-title="Chrome">Chrome</span></a>
-                      </li>
-                  </ul>
-                  <br />
-              </li>
-              <li>
-                <div class="orange"><strong>Development Toolkit</strong></div>
-                <ul>
-                  <li>Chrome's Inspector (built-in to Chrome)</li>
-                </ul>
-                <br />
-              </li>
-              <li>
-                <div class="orange"><strong>Text Editor (your preference)</strong></div>
-                  <ul>
-                    <li>Mac: <a href="https://code.visualstudio.com/download" target="_blank">VS Code</a>, <a href="https://atom.io/" target="_blank">Atom</a>, <a href="http://www.sublimetext.com/2" target="_blank" class="roll"><span data-title="SublimeText">SublimeText</span></a>
-                    </li>
-                    <li>Windows: <a href="https://code.visualstudio.com/download" target="_blank">VS Code</a>, <a href="https://atom.io/" target="_blank">Atom</a>, <a href="http://www.sublimetext.com/2" target="_blank" class="roll"><span data-title="SublimeText">SublimeText</span></a>, <a href="https://notepad-plus-plus.org/download/v6.8.3.html" target="_blank" class="roll"><span data-title="Notepad++">Notepad++</span></a>
-                    </li>
-                    <li>Linux: <a href="https://code.visualstudio.com/download" target="_blank">VS Code</a>, <a href="https://atom.io/" target="_blank">Atom</a>, <a href="http://www.sublimetext.com/2" target="_blank" class="roll"><span data-title="SublimeText">SublimeText</span></a>, <a href="http://www.jedit.org/" target="_blank" class="roll"><span data-title="jEdit">jEdit</span></a>
-                    </li>
-                </ul>
-              </li>
+          <p>We'll be using the following tools in class:</p>
+          <ul style="white-space:nowrap;font-size:85%;margin-top:1.2em;">
+            <li>
+              <div class="orange"><strong>Browser</strong>
+              </div>
+              <ul style="margin-bottom: 1em;">
+                <li>
+                  <a href="https://www.google.com/chrome/browser/" target="_blank" class="roll"><span data-title="Chrome">Google Chrome</span></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="orange"><strong>Text Editor (your preference)</strong></div>
+                <ul style="margin-bottom: 1em;">
+                  <li>
+                    <a href="https://code.visualstudio.com/download" target="_blank">VS Code</a>, <a href="https://atom.io/" target="_blank">Atom</a>, <a href="http://www.sublimetext.com/2" target="_blank" class="roll"><span data-title="Sublime Text">Sublime Text</span></a>, or a personal favorite
+                  </li>
+              </ul>
+            </li>
+            <li>
+              <div class="orange"><strong>Hosting</strong></div>
+              <ul style="margin-bottom: 1em;">
+                  <li>A free <a href="http://www.github.com/" target="_blank" class="roll"><span data-title="GitHub">GitHub.com</span></a> account
+                  <li>Once you have an account, download <a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="orange"><strong>Optional Tools</strong></div>
+              <ul style="margin-bottom: 1em;">
+                <li>A free <a href="http://www.codepen.io/" target="_blank" class="roll"><span data-title="CodePen">CodePen</span></a> account</li>
+              </ul>
+            </li>
           </ul>
-          <aside class="notes">Ask if everyone was able to download everything. If not, no big deal. download now.</aside>
+          <aside class="notes">Ask if everyone was able to download everything. If not, no big deal, download now. GitHub and CodePen weren't mentioned as requirements since they involve signing up for an account. At the very end of class, we'll use GitHub to host your portfolio website for free — it'll be a good intro to version control systems (VCS). CodePen is optional, but helpful — it automatically updates as your type in JavaScript and is an easy way to share code snippets, so I use it all the time.</aside>
         </section>
 
         <section id="project">
           <h2>Our Class Project</h2>
-          <img style="max-height:60vh;box-shadow:0 0 10px rgba(0, 0, 0, 0.15);" src="dist/img/project.gif" alt="Animated GIF of functionality" />
+          <img style="max-height:60vh;" class="shadow" src="dist/img/project.gif" alt="Animated GIF of functionality" />
           <p class="small"><a href="https://s.codepen.io/anythingcodes/debug/PeXvvm/WPkLYNPLOVLM" target="_blank">Check it out &raquo;</a></p>
           <aside class="notes">
 					    This is our class project, but you can make anything you want out of it. Providing you with tools and resources to make what you want of it. CSS and HTML has been provided so we can focus on JS.
@@ -176,24 +177,493 @@
           </aside>
         </section>
 
+        <section>
+          <h2>But first...</h2>
+          <p>Let's review &amp; buff up our intermediate skills!</p>
+          <p>&nbsp;</p>
+          <p><img src="dist/img/corgi-ducklings.gif" alt="A corgi on a skateboard with ducklings" /><br /></p>
+          <aside class="notes">
+            Reviewing objects and arrays, since we'll be working with those tons. Then we'll get to the project.
+          </aside>
+        </section>
+
         <section id="review" data-background="#f05b62">
 					<h2 style="color: #fafafa;font-size:3.7em;">Review</h2>
-				</section>
+        </section>
+        
+        <section>
+          <h2>Review</h2>
+          <h3>Arrays</h3>
+          <div class="clear" style="margin-top:0;">
+            <div class="halfblock fragment">
+              <h4 class="underlined green small">Syntax</h4>
+              <ul class="small">
+                <li class="fragment">Wrapped in square brackets 
+                  <ul class="" style="list-style:none;">
+                    <li class=""><code class="small">var courses = [];</code></li>
+                  </ul>
+                </li>
+                <li class="fragment">Each value is separated by a comma:
+                  <ul style="list-style:none;">
+                    <li class=""><code class="small">var courses = ['JS', 'WordPress', 'ES6'];</code></li>
+                  </ul>
+                </li>
+                <li class="fragment">Access values by <span class="orange">zero-based index</span> using square bracket notation:
+                  <ul style="list-style:none;">
+                    <li class=""><code contenteditable class="small">var courses = ['JS', 'WordPress', 'ES6'];
+console.log(courses[0]); // JS
+console.log(courses[1]); // WordPress
+console.log(courses[2]); // ES6</code></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="halfblock fragment">
+              <h4 class="underlined green small">Adding &amp; Removing Values</h4>
+              <ul class="small">
+                <li class="fragment">Add a value by calling <span class="orange">push()</span>:
+                  <ul style="list-style:none;">
+                    <li class=""><code contenteditable class="small">var courses = ['JS', 'WordPress', 'ES6'];
+courses.push('Sketch');
+console.log(courses); // ['JS', 'WordPress', 'ES6', 'Sketch']</code></li>
+                  </ul>
+                </li>
+                <li class="fragment">The <span class="orange">pop()</span> method removes the last item from the array and returns it:
+                  <ul style="list-style:none;">
+                    <li class=""><code contenteditable class="small">var courses = ['JS', 'WordPress', 'ES6', 'Sketch'];
+var removedCourse = courses.pop();
+console.log(courses); // ['JS', 'WordPress', 'ES6']
+console.log(removedCourse); // 'Sketch'</code></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <aside class="notes">
+            Point out console.log()! We'll be exploring this in detail as part of next section but, for now, note that it prints out the value so we as developers can see the info but it isn't shown on the webpage itself.
+          </aside>
+        </section>
+        
+        <section class="quiz" data-background="rgb(6, 116, 123)">
+          <h2>Quiz</h2>
+          <code>var languages = ['HTML', 'CSS', 'JavaScript', 'Python'];</code>
+          <p>&nbsp;</p>
+          <ol>
+            <li class="fragment">How long is the array?</li>
+            <li class="fragment">What is the index of <code>'JavaScript'</code>?</li>
+            <li class="fragment">What is at the 1st index (<code>languages[1]</code>)?</li>
+            <li class="fragment">What is at the 0th index (<code>languages[0]</code>)?</li>            
+            <li class="fragment">How do we find the length of an array?</li>
+            <li class="fragment">How would you add a new language, <code>'Java'</code>, to the <code>languages</code> array?</li>
+            <li class="fragment">When would we use an array?</li>
+          </ol>
+  
+          <aside class="notes">
+            Answers:
+            <ol>
+              <li>4</li>
+              <li>2</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li><code>.length</code> &raquo; <code>languages.length</code></li>
+              <li><code>.push()</code> &raquo; <code>languages.push('Java');</code></li>
+              <li>Up for discussion :) Perfect for grouping items of the same type in a single variable for one single access point. Able to access items by index, which is a fast look-up time. Great for looping through, easy to filter.</li>
+            </ol>
+          </aside>
+        </section>
+
+        <section>
+          <h2>Review</h2>
+          <h3>Iterating over Arrays</h3>
+          <code>var students = ['Abba', 'Bobbi', 'Celia'];</code>
+      
+          <ul>
+            <li class="fragment">Use a <code>for</code> loop:
+              <ul style="list-style:none;"><li class="small fragment">
+                <code class="small" contenteditable>for(var i = 0; i < students.length; i++) {
+  console.log(students[i]); // What will this display?
+}</code>
+              </li></ul>              
+            </li>
+            <li class="fragment">Mix it up with conditional statements:
+              <ul style="list-style:none;" class="small fragment"><li>
+                <code class="small" contenteditable>for(var i = 0; i < students.length; i++) {
+  console.log(students[i]);
+  if (students[i] === 'Bobbi') {
+    console.log('Lo, a Bobbi!');
+  }
+} // What will this display?</code>
+              </li></ul>              
+            </li>
+          </ul>
+          <aside class="notes">
+            <p>Abba</p>
+            <p>Bobbi</p>
+            <p>Lo, a Bobbi!</p>
+            <p>Celia</p>
+          </aside>
+        </section>
+
+        <section class="quiz" data-background="rgb(6, 116, 123)">
+          <h2>Quiz</h2>
+          <code>var grades = [56, 43, 92, 70, 85];</code>
+          <p>&nbsp;</p>
+          <ol class="small">
+            <li class="fragment">What will this display?
+              <ul style="list-style: none; width: 100%;">
+                <li>
+                  <code contenteditable>for(var i = 0; i < grades.length; i++){
+  console.log(grades[i]);
+}</code>
+                </li>
+              </ul>
+            </li>
+            <li class="fragment">What will this display?
+                <ul style="list-style: none; width: 100%">
+                    <li>
+                      <code contenteditable>for(var i = 0; i < grades.length; i++) {
+  if (grades[i] > 90) {
+    break;
+  }
+  console.log(grades[i]);
+}</code>
+                    </li>
+                  </ul>
+            </li>
+          </ol>
+  
+          <aside class="notes">
+            <ol>
+              <li>56<br />43<br />92<br />70<br />85</li>
+              <li>56<br />43</li>
+            </ol>
+          </aside>
+        </section>
+
+        <section>
+          <h2>Review</h2>
+          <h3>Object Syntax</h3>
+          <ul class="small">
+            <li class="fragment">Wrapped in curly braces 
+              <ul class="" style="list-style:none;">
+                <li><code>var gdiCourse = {};</code></li>
+              </ul>
+            </li>
+            <li class="fragment">Each property is a key and value pair, separated by a colon:
+              <ul style="list-style:none;">
+                <li><code>var gdiCourse = {
+  name: 'Intermediate JavaScript'  
+};</code></li>
+              </ul>
+            </li>
+            <li class="fragment">Any additional property is separated by a comma:
+              <ul class="" style="list-style:none;">
+                <li><code contenteditable>var gdiCourse = {
+  name: 'Intermediate JavaScript',
+  level: 2
+};</code></li>
+              </ul>
+            </li>
+          </ul>
+          <aside class="notes">
+            Edit the additional property portion and say how any data type, including arrays and objects, can be used as a value
+          </aside>
+        </section>
+
+        <section>
+          <h2>Review</h2>
+          <h3>Accessing Object Values</h3>
+          <ul class="small">
+            <li class="fragment">Access values by key using square bracket or dot notation:
+              <ul class="small" style="list-style:none;">
+                <li><code contenteditable class="small">var gdiCourse = {
+  name: 'Intermediate JavaScript',
+  level: 2
+};
+console.log(gdiCourse.name); // Intermediate JavaScript
+console.log(gdiCourse['level']); // 2</code></li>
+              </ul>
+              <p class="fragment highlight">Note the quotes around the key name in bracket notation</p>
+            </li>
+            <li class="fragment" style="white-space: nowrap;">Functions can be added to objects, but are called like standard functions:
+                <ul class="small" style="list-style:none;">
+                  <li><code class="small" contenteditable>var gdiCourse = {
+  name: 'Intermediate JavaScript',
+  level: 2,
+  logCourseName: function() {
+    console.log(this.name + ' is level ' + this.level);
+  }
+};
+gdiCourse.logCourseName(); // Intermediate JavaScript is level 2</code></li>
+                </ul>
+              </li>
+          </ul>
+          <aside class="notes">
+            Point out console.log()! We'll be exploring this in detail as part of next section but, for now, note that it prints out the value so we as developers can see the info but it isn't shown on the webpage itself.
+          </aside>
+        </section>
+
+        <section class="quiz" data-background="rgb(6, 116, 123)">
+            <h2>Quiz</h2>
+            <pre><code contenteditable>var ollieTheCat = {
+  furColor: 'gray',
+  age: 2,
+  personality: 'wild',
+  likes: ['catnip', 'food', 'naps', 'cuddles', 'attention'],
+  adopted: {
+    month: 'february',
+    day: '11',
+    year: '2015'
+  }
+};</code></pre>
+            <div class="clear small" style="margin-top:0;">
+              <div class="halfblock">
+                <ol class="">
+                  <li class="fragment">How many keys are in the <code>ollieTheCat</code> object?</li>
+                  <li class="fragment">What are the key names?</li>
+                  <li class="fragment">What are the values?</li>
+                  <li class="fragment">What is the value of <code>ollieTheCat.personality</code>?</li>
+                </ol>
+              </div>
+              <div class="halfblock">
+                <ol start="5">
+                  <li class="fragment">Name two ways we could get <code>ollieTheCat</code>'s age.</li>
+                  <li class="fragment">How would we get the 0th index of <code>ollieTheCat</code>'s likes?</li>
+                  <li class="fragment">How would we get the month of <code>ollieTheCat</code>'s adoption?</li>
+                  <li class="fragment">When would we use an object?</li>
+                </ol>
+              </div>
+            </div>
+    
+            <aside class="notes">
+                Answers:
+                <ol>
+                  <li>5. There are keys on the child <code>adopted</code> object but those don't count as <code>ollieTheCat</code>'s keys.</li>
+                  <li>furColor, age, personality, likes, adopted</li>
+                  <li>See above</li>
+                  <li>'wild'</li>
+                  <li><code>ollieTheCat.age</code> and ollieTheCat['age']</li>
+                  <li><code>ollieTheCat.likes[0]</code> or <code>ollieTheCat['likes'][0]</code></li>
+                  <li><code>ollieTheCat.adopted.month</code> or <code>ollieTheCat['adopted']['month'] or any combo of bracket or dot notation</code></li>
+                  <li>When mixing multiple data types with different units to represent one instance of a group. For example, you might have a person object. Each person has a different weight (stored in pounds/kg), a different height (stored in feet/cms), etc. That person object would be its own entity, but the values of keys from person object to person object would differ. Easy to update data by key.</li>
+                </ol>
+            </aside>
+        </section>
 
         <section id="debugging" data-background="#f05b62">
 					<h2 style="color: #fafafa;font-size:3.7em;">Debugging</h2>
-				</section>
+        </section>
+
+        <section>
+          <h2>Common JS Problems</h2>
+          <p><img src="dist/img/debugging.jpg" alt="Funny debugging quote" /></p>
+          <aside class="notes">
+           
+            <ul>
+              <li>Global scope (place inside of own <span class="orange">closure function</span>)</li>
+              <li>No strong typing</li>
+              <li>Cross-browser compatibility</li>            
+            </ul> 
+          </aside>
+                   
+        </section>
+
+        <section>
+          <h2>Chrome Developer Tools</h2>  
+          <p class="fragment">Where web developers spend most of their days 🤓</p>
+          <p>&nbsp;</p>
+          <p class="fragment">A panel of debugging tools — debug everything from JavaScript to styling for the webpage you're viewing</p>
+          <p class="fragment">Often referred to as <span class="blue">Dev Tools</span> or <span class="blue">the inspector</span></p>
+        
+          
+          <aside class="notes">
+            Will show you what this looks like. Note that these three tabs are the ones we'll be using the most for this class. Note that these tools exist in other browsers, too, but the UI is slightly different so, for consistency, we're going to use Chrome.
+          </aside>
+        </section>
+
+        <section>
+          <h2>How to Open Dev Tools</h2>
+
+          <div class="clear small">
+            <div class="halfblock">
+              <h3 class="underlined green">
+                Keyboard Shortcuts
+              </h3>
+              <ol>
+                <li><span class="orange">Mac</span>: <code>Command+Option+J</code></li>
+                <li><span class="orange">Windows or Linux</span>: <code>Control+Shift+J</code></li>
+              </ol>
+            </div>
+            <div class="halfblock">
+              <h3 class="underlined green">
+                Manually
+              </h3>
+              <ol>
+                <li><span class="orange">Through Chrome's menu</span>: Choose <code>View &gt; Developer &gt; JavaScript Console</code></li>
+                <li><span class="orange">On a webpage</span>: Right-click anywhere on the page and click <code>Inspect Element</code>   
+                <p class="info small" style="margin-top: 0.5em;">If you use this option, the <code>Elements</code> tab will be open</p>
+                </li>
+              </ol>
+            </div>
+          </div>
+          <p>&nbsp;</p>
+          <p class="fragment green">Try this out now!</p>
+          <p class="fragment">Dev tools has many tabs, including:
+          <ol class="small">
+            <li class="fragment"><code>Console</code> — list of <span class="blue">errors</span> or <span class="blue">console messages</span> generated by the code (mainly JS)</li>
+            <li class="fragment"><code>Sources</code> — where you can explore and debug <span class="blue">JS and CSS files</span> used by the page</li>
+            <li class="fragment"><code>Elements</code> — where you can play around with CSS <span class="blue">styles</span> and navigate through the page's HTML</li>
+          </ol>
+          <aside class="notes">
+            Note that you can dock it to the bottom, right, undock it, etc. depending on your preference.
+          </aside>
+        </section>
+
+        <section>
+          <h2>Console Statements</h2>
+          <div class="fragment small">
+            <p>Check out <a href="http://tiny.cc/gdi-js-console" target="_blank">http://tiny.cc/gdi-js-console</a> and open the <code>Console</code> tab of dev tools</p>
+            <p><img src="dist/img/console.png" class="shadow" alt="The console and its types of messages" /><br />There is a <strong>lot</strong> going on!</p>
+          </div>
+        </section>
+
+        <section>
+          <h3>Types of Console Statements</h3>
+          <p>Every console statement has a line number</p>
+          <div class="clear" style="margin-top:0.5em;">
+            <div class="halfblock small">
+              <p><img src="dist/img/console.png" class="shadow" alt="The console and its types of messages" style="max-width: 100%;" /></p>
+              <p><a href="http://tiny.cc/gdi-js-console" target="_blank">http://tiny.cc/gdi-js-console</a></p>
+            </div>
+            <div class="halfblock">
+              <ul class="small">
+                <li class="fragment"><code>console.log(x)</code> — a log message. If you log nested data (e.g. arrays or objects), it can be expanded by clicking the arrow icon to the left.</li>
+                <li class="fragment"><code>console.warn(x)</code> — a warning message shown in yellow</li>
+                <li class="fragment"><code>console.error(x)</code> — an error message shown in red</li>
+                <li class="fragment"><code>console.table(x)</code> - a table representing nested data (e.g. arrays or objects)</li>
+              </ul>
+            </div>              
+          </div>
+          <div class="fragment highlight">
+            <p class="info small">Too many console statements? Add some pizzazz with <code>%c</code>!</p>
+            <ul style="list-style:none;" class="small">
+              <li><code>console.log('%cThis text will be fuchsia and large', 'color: fuchsia; font-size: 18px;');</code></li>
+            </ul>
+          </div>
+
+          <aside class="notes">
+            Note that clicking the line number sends you to the <code>Sources</code> tab. Click <code>Console</code> to go back.
+            We'll mostly be using <code>console.log()</code> in class.
+            In the <code>log</code>, <code>warn</code>, and <code>error</code> cases we've passed in data, e.g. an object, a number, an array, a string.
+          </aside>
+        </section>
+
+        <!-- <section class="activity" data-background="rgb(6, 116, 123)">          
+          <h2>Activity</h2>
+          <h3>Exploring the console</h3>
+          <div class="clear">
+            <div class="halfblock">
+              <ol class="small">
+                <li>Go to <a href="http://tiny.cc/gdi-js-console">http://tiny.cc/gdi-js-console</a></li>
+                <li>Open the Chrome developer tools (<code>Command+Option+J</code> on Mac or <code>Control+Shift+J</code> on Windows/Linux)</li>
+                <li>Click the <code>Sources</code> tab in the developer tools panel</li>
+                    <li>On the left-hand Network tab, open the <code>scripts.js</code>file</li>
+                  </ol>
+              </div>
+              <div class="halfblock">
+                <p><img style="max-width: 100%;" class="shadow" src="dist/img/dev-tools-sources.gif" /></p>
+              </div>
+            </div>
+          <aside class="notes">
+            Lots going on here! We're going to focus on the Console, Sources, and Elements tabs. Do a brief review of styles being applied to each element. Show docking options. You can also right-click the page and choose <code>Inspect Element</code> to view the HTML, then click the <code>Console</code> tab.
+          </aside>
+        </section> -->
+        
+        <section id="breakpoints">
+          <h2>Breakpoints</h2>
+          <div class="small">
+            <p class="fragment">Console statements are helpful, but what if we want to track code, step by step?</p>
+            <p class="fragment">Breakpoints <span class="orange">pause</span> ⏸️ code execution, allowing you to capture what's going on at that moment in time</p>
+          </div>
+          <div class="small fragment clear">
+            <div class="halfblock">
+              <p><img style="max-width: 100%;" class="shadow" src="dist/img/setting-breakpoint.gif" /></p>
+            </div>
+            <div class="halfblock">
+              <h4 class="green underlined">How to set a breakpoint</h4>
+              <ol>
+                <li>Find your JS file in the <code>Sources</code> tab of dev tools</li>
+                <li class="fragment">Click the line number to the left of any lines to which you'd like to add breakpoints</li>
+                <li class="fragment">Reload the page</li>
+                <li class="fragment">Click the <span class="green">Continue</span> icon (<img src="dist/img/button-continue.png" class="inline-icon" alt="The Continue icon for breakpoints" />) to continue from one breakpoint to the next, or the <span class="green">Step Into</span> icon (<img src="dist/img/button-step-into.png" class="inline-icon" alt="The Step Into icon for breakpoints" />) for a more granular step-by-step view</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="highlight small fragment">
+            <p class="info small">You can also set <span class="blue">conditional breakpoints</span> by right-clicking a breakpoint and clicking <code>Edit breakpoint...</code></p>
+          </div>
+          <aside class="notes">
+            Show how totalFunctionsCalled changes. Set a conditional breakpoint too tied to myNumber value. Show how 'Step Into' steps into the function, which is helpful to get a line-by-line recording of what's happening.
+            <ul>
+                <li>Step Over - step through code line by line to get insights into how each line affects the cars being updated. If your code calls anoter func, the debugger won't jump into its code, instead stepping over so that the focus remains on the current function/scope.</li>
+                <li>Step Into - like step over, however clicking step into at the function call will cause debugger to move its execution to the first line in the functions definition</li>
+                <li>Step Out - having stepped into a function, clicking this will cause the remainder of the function definiton to be run and the debugger will move its execution to the parent function</li>
+              </ul>
+          </aside>
+        </section>
+
+        <section>
+          <h2>Watch Expressions</h2>
+          <div class="clear">
+            <div class="halfblock">
+              <p class="small">What if you want <strong>more</strong> details from a variable you're monitoring?</p>
+              <p class="fragment"><img src="dist/img/more-details.gif" style="max-width:100%;" alt="More details" /></p>
+              <p class="small fragment">Use <span class="blue">watch expressions</span> when you need to extract <span class="green">properties</span> from variables</p>
+            </div>
+            <div class="halfblock fragment">
+              <p><img class="shadow" src="dist/img/watch-expressions.png" style="max-width: 100%;" alt="The watch expressions menu" /></p>
+              <p class="small">Typically used by adding a breakpoint to a function call line, then using Step Into (<img src="dist/img/button-step-into.png" class="inline-icon" alt="The Step Into icon for breakpoints" />)<br /><a href="http://tiny.cc/gdi-js-debug" target="_blank">Let's try it out &raquo;</a></p>              
+            </div>
+          </div>
+          
+          <aside class="notes">
+            Often we're changing/mutating data and need to figure out why a certain variable changed. Instead of console.log()ing everything, we can track data with the console. Demo by setting breakpoint on firstFunction, add myArray and myArray.length to Watch Expressions, then Step Into and show changes.
+          </aside>
+        </section>
+
+        <section class="activity" data-background="rgb(6, 116, 123)">          
+          <h2>Activity</h2>
+          <h3>Breakpoints &amp; Watch Expressions</h3>
+          <ol>
+            <li>Go to <code><a href="http://tiny.cc/gdi-js-debug" target="_blank">http://tiny.cc/gdi-js-debug</a></code></li>
+            <li>Add a breakpoint to one of the mutating/changing variables and confirm you see it changing from breakpoint to breakpoint</li>
+            <li>Make a breakpoint that only runs when <code>myNumber</code> is equal to 20</li>
+            <li>Add a watch expression for one of the mutating variables and monitor its changes</li>
+          </ol>                 
+        </section>
+
+        <section>
+          <h2>But wait — there's more!</h2>
+
+          <p><iframe width="560" height="315" src="https://www.youtube.com/embed/-q1z8BPFItw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+          <p class="small"><a href="https://www.youtube.com/watch?v=-q1z8BPFItw&t=1511s" target="_blank">Debugging JavaScript - Beginner to Advanced in One Video &raquo;</a></p>
+
+          <aside class="notes">A long video, but worth it! Also Breaking Bad-themed, plus if you liked the show.</aside>
+        </section>
 
         <section class="activity" data-background="rgb(6, 116, 123)">
           <h2>Activity</h2>
           <p>Let's download the activity files.</p>
           <p>&nbsp;</p>
           <ol>
-            <li>Unzip <a href="http://tiny.cc/gdi-js-activity">http://tiny.cc/gdi-js-activity</a> to a place you'll remember later (e.g. your <code>Documents</code> folder)</li>
+            <li>Go to <code><a href="http://tiny.cc/gdi-js-project">http://tiny.cc/gdi-js-project</a></code> and unzip the file to a location you'll remember later (for example, your <code>Documents</code> folder)</li>
             <li>Open the HTML file in both your editor and Chrome</li>
-            <li>Reference the <code>js/scripts.js</code> file in your HTML, then test if it's working with a <code>console.log()</code>!</li>
+            <li>Reference the <code>js/scripts.js</code> file in your HTML</li>
+            <li>Add a <code>console.log()</code> statement to confirm that the JS file is hooked up properly.</li>
           </ol>
-
+          <p>&nbsp;</p>
+          <p class="highlight small">Be sure to save your files &amp; refresh the page!</p>
           <aside class="notes">
             Do this alongside them. Ask if anyone remembers how to link JS script to HTML file. Why is it done above the closing <code>body</code> tag?
           </aside>
@@ -220,7 +690,7 @@
   		
       <footer>
           <div class="copyright">
-            Slides at <a href="http://tiny.cc/gdi-js-1">http://tiny.cc/gdi-js-1</a>&nbsp;
+            Slides at <a href="http://tiny.cc/gdi-js">http://tiny.cc/gdi-js</a>&nbsp;
                | &nbsp;
                <div class="toc-accordion">
                   <input type="checkbox" id="toc" />
@@ -228,7 +698,7 @@
                   <div class="toc-accordion__contents">
                     <ol>
                       <li><a href="#welcome">Welcome</a></li>
-                      <li><a href="#debugging">Review</a></li>
+                      <li><a href="#review">Review</a></li>
                       <li><a href="#debugging">Debugging</a></li>
                     </ol>
                   </div>
