@@ -27,3 +27,6 @@ console.error(myObject.error.message);
 
 // Console table statement
 console.table(myObject.arr);
+
+// Formatted cnsole log statement
+console.log('%cThis text will be fuchsia and large', 'color: fuchsia; font-size: 18px;');
