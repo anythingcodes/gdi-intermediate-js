@@ -126,9 +126,6 @@ module.exports = function(grunt) {
 			options: {
 				watchTask: true,
 				server: './'
-			},
-			snippetOptions: {
-				ignorePaths: "activities/**"
 			}
 		}
 
