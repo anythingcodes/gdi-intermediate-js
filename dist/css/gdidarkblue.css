@@ -429,7 +429,8 @@ h1, h2, h3, h4, h5, h6 {
 .reveal table th,
 .reveal table td {
   text-align: left;
-  padding-right: .3em; }
+  padding-right: .3em;
+  vertical-align: top; }
 
 .reveal table th {
   font-weight: bold; }
