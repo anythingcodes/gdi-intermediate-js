@@ -778,66 +778,32 @@ gdiCourse.logCourseName(); // Intermediate JavaScript is level 2</code></li>
               <td>
                 <ul>
                   <li>HTML:
-                    <ul style="list-style: none;"><li><pre><code class="xml"><div id="myId"></div></code></pre></li></ul>
+                    <ul style="list-style: none;"><li><pre><code class="xml"><h1 id="myId">Welcome to my page</h1></code></pre></li></ul>
                   </li>
                   <li>JS:
-                    <ul style="list-style: none;"><li><pre><code class="js">var el = document.getElementById('myId');</code></pre></li></ul>
+                    <ul style="list-style: none;"><li><pre><code class="xml">var el = document.getElementById('myId');</code></pre></li></ul>
                   </li>
                 </ul>
               </td>
               <td style="white-space: nowrap;">1 element</td>
             </tr>
             <tr class="fragment">
-              <td><code>getElementsByClassName()</code></td>
-              <td>
-                <ul>
-                  <li>HTML:
-                    <ul style="list-style: none;"><li><pre><code class="xml"><a href="http://girldevelopit.com" class="link">GDI</a>
-<a href="http://hiretechladies.com" class="link">Tech Ladies</a></code></pre></li></ul>
-                  </li>
-                  <li>JS:
-                    <ul style="list-style: none;"><li><pre><code class="js">var els = document.getElementsByClassName('link');</code></pre></li></ul>
-                  </li>
-                </ul>
-              </td>
-              <td style="white-space: nowrap;">Array of elements</td>
-            </tr>
-
-            <tr class="fragment">
-              <td><code>querySelector()</code></td>
-              <td>
-                <ul>
-                  <li>HTML:
-                    <ul style="list-style: none;"><li><pre><code class="xml"><div class="container">
-  <button>First Button</button>
-  <button>Second Button</button>
-</div></code></pre></li></ul>
-                  </li>
-                  <li>JS:
-                    <ul style="list-style: none;"><li><pre><code class="js">var el = document.querySelector('.container button');</code></pre></li></ul>
-                  </li>
-                </ul>
-              </td>
-              <td style="white-space: nowrap;">1 element; the first match</td>
-            </tr>
-            <tr class="fragment">
-                <td><code>querySelectorAll()</code></td>
+                <td><code>getElementsByClassName()</code></td>
                 <td>
                   <ul>
                     <li>HTML:
-                      <ul style="list-style: none;"><li><pre><code class="xml"><div class="container">
-    <button>First Button</button>
-    <button>Second Button</button>
-  </div></code></pre></li></ul>
+                      <ul style="list-style: none;"><li><pre><code class="xml"><a href="http://girldevelopit.com" class="link">GDI</a>
+<a href="http://hiretechladies.com" class="link">Tech Ladies</a></code></pre></li></ul>
                     </li>
                     <li>JS:
-                      <ul style="list-style: none;"><li><pre><code class="js">var el = document.querySelectorAll('.container button');</code></pre></li></ul>
+                      <ul style="list-style: none;"><li><pre><code class="xml">var els = document.getElementsByClassName('link');</code></pre></li></ul>
                     </li>
                   </ul>
                 </td>
                 <td style="white-space: nowrap;">Array of elements</td>
               </tr>
-              <tr class="fragment"><td colspan="3">And much more!</td></tr>
+            
+            
           </table>
 
           <aside class="notes">
@@ -845,6 +811,84 @@ gdiCourse.logCourseName(); // Intermediate JavaScript is level 2</code></li>
           </aside>
 
         </section>
+
+        <section>
+            <h3>Methods for Querying the DOM</h3>
+            
+            <table class="compact data">
+              <tr>
+                <th>Method</th>
+                <th>Usage</th>
+                <th>Returns</th>
+              </tr>
+
+              <tr class="fragment">
+                  <td><code>getElementsByTagName()</code></td>
+                  <td>
+                    <ul>
+                      <li>HTML:
+                        <ul style="list-style: none;"><li><pre><code class="xml"><button>First Button</button>
+<button>Second Button</button></code></pre></li></ul>
+                      </li>
+                      <li>JS:
+                        <ul style="list-style: none;"><li><pre><code class="xml">var els = document.getElementsByTagName('button');</code></pre></li></ul>
+                      </li>
+                    </ul>
+                  </td>
+                  <td style="white-space: nowrap;">Array of elements</td>
+                </tr>
+
+              <tr class="fragment">
+                  <td><code>querySelectorAll()</code></td>
+                  <td>
+                      <ul>
+                        <li>HTML:
+                          <ul style="list-style: none;"><li><pre><code class="xml"><div class="container">
+  <input name="referral" type="radio" value="ad" />
+  <input name="referral" type="radio" value="word of mouth" />
+</div></code></pre></li></ul>
+                        </li>
+                        <li>JS:
+                          <ul style="list-style: none;"><li><pre><code class="xml">var els = document.querySelectorAll('.container input[name='referral']');
+// what would els reference?</code></pre></li></ul>
+                        </li>
+                      </ul>
+                  </td>
+                  <td style="white-space: nowrap;">Array of elements</td>
+                </tr>
+                <tr class="fragment">
+                    <td><code>querySelector()</code></td>
+                    <td>
+                      <ul>
+                        <li>HTML:
+                          <ul style="list-style: none;"><li><pre><code class="xml"><div class="container">
+  <input name="referral" type="radio" value="ad" />
+  <input name="referral" type="radio" value="word of mouth" />
+</div></code></pre></li></ul>
+                        </li>
+                        <li>JS:
+                          <ul style="list-style: none;"><li><pre><code class="xml">var el = document.querySelector('.container input[name='referral']');
+// what would el reference?</code></pre></li></ul>
+                        </li>
+                      </ul>
+                    </td>
+                    <td style="white-space: nowrap;">1 element; the first match</td>
+                  </tr>
+              
+              
+  
+              
+             
+
+                
+                <tr class="fragment"><td colspan="3">And much more!</td></tr>
+            </table>
+  
+            <aside class="notes">
+              <p>Tons available! Let's take a look at the ones we'll be using.</p>
+            </aside>
+  
+          </section>
 
         <section>
           <h3>Query Methods in Action</h3>
