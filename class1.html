@@ -710,6 +710,11 @@ gdiCourse.logCourseName(); // Intermediate JavaScript is level 2</code></li>
           </aside>          
         </section>
 
+        <section>
+          <h2>But first...</h2>
+          <img src="dist/img/closure.gif" alt="Closure GIF of Rachel from Friends" />
+        </section>
+
         <section id="events" data-background="#f05b62">
           <h2 style="color: #fafafa;font-size:3.7em;">Events &amp; DOM Interactions</h2>
         </section>
@@ -915,7 +920,7 @@ myLink.addEventListener('click', function(e) {
   * e is our event object, and we've
   * prevented the default event behavior
   */
-  e.preventDefault();    
+  e.preventDefault();   
   console.log('Not going there!');
 });</code></pre>
             <p>&nbsp;</p>
@@ -1007,7 +1012,8 @@ myLink.addEventListener('click', function(e) {
             <ol style="font-size:80%">              
               
               <li>Using the <code>data-modal</code> attribute on each modal link, get the ID of its corresponding modal element
-                <p class="small info highlight" style="margin: 0.5em 0;"><strong>Hint:</strong> Use <code>getAttribute('attribute-name-here')</code> on a DOM element to get the value of an attribute, for example:<br /><code>var time = myEl.getAttribute('data-time');</code></p>
+                <p class="small info highlight" style="margin: 0.5em 0;"><strong>Hint:</strong> Use <code>this.getAttribute('attribute-name-here')</code> in your callback function to get the value of that DOM element's attribute, for example:<br /><code>var time = this.getAttribute('data-time');</code></p>
+                <p class="small highlight" style="margin: 0.5em 0;"><strong>Challenge:</strong> Wow, where did <code>this</code> come from? Can you add a breakpoint to determine what the value of <code>this</code> is?</p>                
               </li>
               <li>Find the element with the matching ID and add the <code>open</code> class to it. This will style it with the opened modal CSS.
                 <p class="small highlight info" style="margin-top: 0.5em;"><strong>Hint:</strong> To add a class to an element, use <code>myEl.classList.add('class-here')</code>.</p>
@@ -1087,6 +1093,7 @@ myLink.addEventListener('click', function(e) {
                 <ul>
                   <li>If a project <em>doesn't</em> have that filter's category, remove the <code>active</code> class. You can do this with <code>myEl.classList.remove('active');</code></li>
                   <li>If a project <em>does</em> have that filter's category, add the <code>active</code> class. You can do this with <code>myEl.classList.add('active');</code></li>
+                  <p class="small info highlight" style="margin: 0.5em 0;"><strong>Hint:</strong> You can use <code>getAttribute('attribute-name-here')</code> on a project element, too.</code></p>
                 </ul>                
               </li>
               <li>Make sure that all projects are active when the 'All' filter is selected.</li>
