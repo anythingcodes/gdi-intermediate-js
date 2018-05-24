@@ -935,29 +935,6 @@ myLink.addEventListener('click', function(e) {
             <p class="fragment">By attaching an event listener and calling <code>preventDefault()</code> on the event object, we can intervene.</p>
           </section>
 
-          <section>
-            <h2>Modal Plans</h2>
-            <h3>Part 1</h3>
-            <div class="fragment-progression">
-              <div class="fragment">
-                <img src="dist/img/site-before.png" alt="Modal Start">
-              </div>
-              <div class="fragment">
-                <img src="dist/img/site-modal-0.png" alt="The modal-link classes">
-              </div>         
-            </div>
-            <aside class="notes">
-              <p>A modal is open when it has the .open class. Each .modal-link element has a data-modal attribute, which is the same as the ID of the modal element. Using this data attribute, we need to find the element with that ID and add the open class to it.</p>
-              <ol>
-                <li>Query for the .modal-link elements</li>
-                <li>Add an event listener to modal link when it's clicked</li>
-                <li>Get the corresponding modal ID</li>
-                <li>Find the element with that modal ID</li>
-                <li>Add the open class to it</li>
-                <li>Find the modal close buttons and add an event listener to remove the 'open' class from any modal that has an open class</li>
-              </ol>
-            </aside>
-        </section>
 
         <section class="activity" data-background="rgb(6, 116, 123)">
           <h2>Activity</h2>
@@ -981,7 +958,8 @@ myLink.addEventListener('click', function(e) {
 
         <section>
             <h2>Modal Plans</h2>
-            <h3>Part 2</h3>
+            <h3>Opening the 'More Details' Modals</h3>
+            
             <div class="fragment-progression">
               <div class="fragment">
                 <img src="dist/img/site-before.png" alt="Modal Start">
@@ -998,10 +976,9 @@ myLink.addEventListener('click', function(e) {
               <div class="fragment">
                 <img src="dist/img/site-modal-3.png" alt="Add an open class to it">
               </div> 
-              <div class="fragment">
-                <img src="dist/img/site-modal-4.png" alt="When the close button is clicked, remove any modal's open class">
-              </div>                  
+                               
             </div>
+            <p class="small"><a href="https://s.codepen.io/anythingcodes/debug/PeXvvm/WPkLYNPLOVLM" target="_blank">See it in action &raquo;</a></p>
             <aside class="notes">
               <p>A modal is open when it has the .open class. Each .modal-link element has a data-modal attribute, which is the same as the ID of the modal element. Using this data attribute, we need to find the element with that ID and add the open class to it.</p>
               <ol>
@@ -1017,20 +994,39 @@ myLink.addEventListener('click', function(e) {
 
         <section class="activity" data-background="rgb(6, 116, 123)">
             <h2>Activity</h2>
-            <p>Opening &amp; Closing Modals</p>
+            <p>Opening the 'More Details' Modals</p>
             <p class="small">&nbsp;</p>
             <ol style="font-size:80%">              
               
               <li>Using the <code>data-modal</code> attribute on each modal link, get the ID of its corresponding modal element
-                <p class="small info highlight" style="margin: 0.5em 0;"><strong>Hint:</strong> Use <code>getAttribute('attribute-name-here')</code> on a DOM element to get the value of a data attribute.<br /><code>var time = myEl.getAttribute('data-time');</code></p>
+                <p class="small info highlight" style="margin: 0.5em 0;"><strong>Hint:</strong> Use <code>getAttribute('attribute-name-here')</code> on a DOM element to get the value of an attribute, for example:<br /><code>var time = myEl.getAttribute('data-time');</code></p>
               </li>
-              <li>Find the element with that modal ID and add the <code>open</code> class to it. This will style it with the opened modal CSS.
-              </li>
-              <li>Add an event listener to each modal close button. When clicked, each close button should remove the <code>open</code> class from any open modal.
-                <p class="small highlight info" style="margin-top: 0.5em;"><strong>Hint:</strong> To add a class to an element, use <code>myEl.classList.add('class-here')</code>. To remove a class from an element, use <code>myEl.classList.remove('class-here')</code></p></li>
-            </ol>
-            
+              <li>Find the element with the matching ID and add the <code>open</code> class to it. This will style it with the opened modal CSS.
+                <p class="small highlight info" style="margin-top: 0.5em;"><strong>Hint:</strong> To add a class to an element, use <code>myEl.classList.add('class-here')</code>.</p>
+              </li>              
+            </ol>            
       </section>
+
+      <section>
+        <h2>Hurray! Our modals open!</h2>
+        <p class="fragment">... but how do we close them?</p>
+        <div class="fragment">
+          <img src="dist/img/site-modal-4.png" alt="When the close button is clicked, remove any modal's open class">
+        </div>  
+        <p class="small"><a href="https://s.codepen.io/anythingcodes/debug/PeXvvm/WPkLYNPLOVLM" target="_blank">See it in action &raquo;</a></p>
+
+      </section>
+
+      <section class="activity" data-background="rgb(6, 116, 123)">
+        <h2>Activity</h2>
+        <p>Closing the 'More Details' Modals</p>
+        <p class="small">&nbsp;</p>
+        <ol>
+          <li>Add an event listener to each modal close button. When clicked, each close button should remove the <code>open</code> class from any open modal.
+            <p class="small highlight info" style="margin-top: 0.5em;"><strong>Hint:</strong> To remove a class from an element, use <code>myEl.classList.remove('class-here')</code></p>
+          </li>
+        </ol>           
+       </section>
         
         <section>
             <h2>Filtering Plans</h2>
@@ -1057,6 +1053,8 @@ myLink.addEventListener('click', function(e) {
                 <img src="dist/img/site-filtering-5.png" alt="Filtering Final">
               </div>
             </div>
+            <p class="small"><a href="https://s.codepen.io/anythingcodes/debug/PeXvvm/WPkLYNPLOVLM" target="_blank">See it in action &raquo;</a></p>
+
             <aside class="notes">
               <p>A project is visible when it has the .active class. By default, all projects have .active -- show students this slowly because the Elements tab may be new for them.</p>
               <ol>
