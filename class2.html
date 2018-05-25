@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+		<meta charset="utf-8">
+
+		<title>GDI Intermediate JavaScript</title>
+
+		<meta name="description" content="Girl Develop It intermediate JavaScript class">
+		<meta name="author" content="Girl Develop It">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="dist/css/reveal.css">
+		<link rel="stylesheet" href="dist/css/gdidarkblue.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<!-- light editor --><link rel="stylesheet" href="dist/css/light.css">
+		<!-- dark editor <link rel="stylesheet" href="dist/css/dark.css">-->
+		<!-- <link rel="stylesheet" href="dist/css/zenburn.css"> -->
+
+		<link rel="stylesheet" href="plugin/accessibility-helper/css/accessibility-helper.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'dist/css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!-- If use the PDF print sheet so students can print slides-->
+
+		<link rel="stylesheet" href="dist/css/print/pdf.css" type="text/css" media="print">
+		<link rel="icon" type="image/x-icon" href="favicon.ico" />
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+        <section id="title">
+            <h2>Girl Develop It</h2>
+            <img src="dist/img/gdi-logo-laptop.jpg" alt="GDI JavaScript Logo" />
+            <h3>Intermediate JavaScript</h3>
+            <p>
+                <small>Class 2</small>
+            </p>
+        </section>
+
+        <section>
+          <h2>Today's Topics</h2>
+          <p>Lots of project work, including:</p>
+          <ul>
+            <li>Helpful event methods</li>
+            <li>Opening the 'More Details' modal</li>
+            <li>Closing the 'More Details' modal</li>
+            <li>Filtering projects</li>
+            <li>Deploying your site to GitHub!</li>
+          </ul>
+        </section>
+
+        <section id="review" data-background="#f05b62">
+					<h2 style="color: #fafafa;font-size:3.7em;">Events Review</h2>
+				</section>
+
+        <section>
+          <h3>Events Review</h3>
+          <p class="small">When someone interacts with your page, how do you control what happens?</p>          
+          <div class="clear small">
+            <div class="halfblock">
+              <h4 class="green underlined fragment">You'll need 4 things:</h4>
+              <ol>
+                <li class="fragment">The <span class="blue">DOM element</span> you're monitoring</li>                
+                <li class="fragment">A string of <span class="blue">the type of event</span> you're monitoring on this DOM element, such as:
+                  <ul style="width:100%;">
+                    <li class="fragment">When this link element is <code>'click'</code>ed</li>
+                    <li class="fragment">When this input is <code>'change'</code>d</li>
+                    <li class="fragment">When this window is <code>'scroll'</code>ed</li>
+                  </ul>
+                </li>
+                <li class="fragment">A <span class="blue">callback function</span>, which happens once this type of event fires off. The callback function contains the code you'd like to run once this event happens.</li>
+                <li class="fragment">The <code>addEventListener()</code> method to bring it all together</li>
+              </ol>
+            </div>
+            <div class="halfblock fragment">
+              <h4 class="green underlined">Syntax</h4>
+              <p class="">Let's say we have a checkbox element in our HTML:</p>
+              <div class="highlight fragment" style="white-space: nowrap;">
+                <pre><code class="xml"><input type="checkbox" id="some-unique-id" /></code></pre>
+              </div>
+              <p>&nbsp;</p>
+              <p class="fragment">We would add an event listener to our JS like so:</p>
+              
+              <div class="highlight fragment">
+                  <pre><code class="js">myCheckbox.addEventListener('change', function() {
+  console.log('The myCheckbox element changed!');
+});</code></pre>
+              </div>
+              <p>&nbsp;</p>
+              <p class="fragment blue" style="text-align: center;"><strong>But how do we get the <code>myCheckbox</code> DOM element?</strong></p>
+            </div>
+          </div>
+          <aside class="notes">
+            Ask class what we're overlooking: how to get myCheckbox DOM element.
+          </aside>
+        </section>
+        
+        <section>
+          <h2>How do we get the DOM element?</h2>
+          <p class="fragment">Use the built-in <code>document</code> object with <span class="blue">query methods</span>!</p>
+          <p class="fragment">You can query elements by ID, class, CSS selector, tag name, and more.</p>
+          <aside class="notes">
+            IDs are fastest. Why you'd never want more than one element with the same ID
+          </aside>
+        </section>
+
+        <section>
+          <h3>Methods for Querying the DOM</h3>
+          
+          <table class="compact data fragment">
+            <tr>
+              <th>Method</th>
+              <th>Usage</th>
+              <th>Returns</th>
+            </tr>
+            <tr>
+              <td><code>getElementById()</code></td>
+              <td>
+                <ul>
+                  <li>HTML:
+                    <ul style="list-style: none;"><li><pre><code class="xml"><h1 id="myId">Welcome to my page</h1></code></pre></li></ul>
+                  </li>
+                  <li>JS:
+                    <ul style="list-style: none;"><li><pre><code class="xml">var el = document.getElementById('myId');</code></pre></li></ul>
+                  </li>
+                </ul>
+              </td>
+              <td style="white-space: nowrap;">1 element</td>
+            </tr>
+            <tr class="fragment">
+                <td><code>getElementsByClassName()</code></td>
+                <td>
+                  <ul>
+                    <li>HTML:
+                      <ul style="list-style: none;"><li><pre><code class="xml"><a href="http://girldevelopit.com" class="link">GDI</a>
+<a href="http://hiretechladies.com" class="link">Tech Ladies</a></code></pre></li></ul>
+                    </li>
+                    <li>JS:
+                      <ul style="list-style: none;"><li><pre><code class="xml">var els = document.getElementsByClassName('link');</code></pre></li></ul>
+                    </li>
+                  </ul>
+                </td>
+                <td style="white-space: nowrap;">Array of elements</td>
+              </tr>
+            
+            
+          </table>
+
+          <aside class="notes">
+            <p>Tons available! Let's take a look at the ones we'll be using.</p>
+          </aside>
+
+        </section>
+
+        <section>
+            <h3>Methods for Querying the DOM</h3>
+            
+            <table class="compact data">
+              <tr>
+                <th>Method</th>
+                <th>Usage</th>
+                <th>Returns</th>
+              </tr>
+
+              <tr class="fragment">
+                  <td><code>getElementsByTagName()</code></td>
+                  <td>
+                    <ul>
+                      <li>HTML:
+                        <ul style="list-style: none;"><li><pre><code class="xml"><button>First Button</button>
+<button>Second Button</button></code></pre></li></ul>
+                      </li>
+                      <li>JS:
+                        <ul style="list-style: none;"><li><pre><code class="xml">var els = document.getElementsByTagName('button');</code></pre></li></ul>
+                      </li>
+                    </ul>
+                  </td>
+                  <td style="white-space: nowrap;">Array of elements</td>
+                </tr>
+
+              <tr class="fragment">
+                  <td><code>querySelectorAll()</code></td>
+                  <td>
+                      <ul>
+                        <li>HTML:
+                          <ul style="list-style: none;"><li><pre><code class="xml"><div class="container">
+  <input name="referral" type="radio" value="ad" />
+  <input name="referral" type="radio" value="word of mouth" />
+</div></code></pre></li></ul>
+                        </li>
+                        <li>JS:
+                          <ul style="list-style: none;"><li><pre><code class="xml">var els = document.querySelectorAll('.container input[name='referral']');
+// what would els reference?</code></pre></li></ul>
+                        </li>
+                      </ul>
+                  </td>
+                  <td style="white-space: nowrap;">Array of elements</td>
+                </tr>
+                <tr class="fragment">
+                    <td><code>querySelector()</code></td>
+                    <td>
+                      <ul>
+                        <li>HTML:
+                          <ul style="list-style: none;"><li><pre><code class="xml"><div class="container">
+  <input name="referral" type="radio" value="ad" />
+  <input name="referral" type="radio" value="word of mouth" />
+</div></code></pre></li></ul>
+                        </li>
+                        <li>JS:
+                          <ul style="list-style: none;"><li><pre><code class="xml">var el = document.querySelector('.container input[name='referral']');
+// what would el reference?</code></pre></li></ul>
+                        </li>
+                      </ul>
+                    </td>
+                    <td style="white-space: nowrap;">1 element; the first match</td>
+                  </tr>
+              
+              
+  
+              
+             
+
+                
+                <tr class="fragment"><td colspan="3">And much more!</td></tr>
+            </table>
+  
+            <aside class="notes">
+              <p>Tons available! Let's take a look at the ones we'll be using.</p>
+            </aside>
+          </section>
+
+          <section id="event-object" data-background="#f05b62">
+            <h2 style="color: #fafafa;font-size:3.7em;">Using the Event Object</h2>
+          </section>
+       
+        <section>
+          <h3>Can we reference the event itself?</h3>
+          <p class="small">A parameter representing <span class="blue">the event object</span> can be passed to the callback:</p>
+          <pre><code class="xml"><a href="http://girldevelopit.com" id="testLink">GDI</a></code></pre>
+          <p>&nbsp;</p>
+          <pre class="fragment"><code class="javascript">var myLink = document.getElementById('testLink');
+  
+myLink.addEventListener('click', function(e) {
+  /* 
+  * e is our event object, and we've
+  * prevented the default event behavior
+  */
+  e.preventDefault();   
+  console.log('Not going there!');
+});</code></pre>
+            <p>&nbsp;</p>
+            <p class="highlight small info fragment">By convention, the event object is typically called <code>e</code> or <code>evt</code>, but you can call it anything you'd like.</p>
+            <aside class="notes">
+              Point out <code>preventDefault()</code> -- on next slide
+            </aside>
+          </section>
+
+          <section>
+            <h2>The <code>preventDefault()</code> method</h2>
+            <p class="fragment">Prevent the default behavior of any event</p>
+            <p>&nbsp;</p>
+            <ul style="white-space: nowrap;">
+              <li class="fragment">What's the default behavior when this link is clicked?
+                <pre><code class="xml"><a href="http://girldevelopit.com">Girl Develop It</a></code></pre>
+                <p>&nbsp;</p>
+              </li>
+              <li class="fragment">What's the default behavior when you click this input?
+                <pre><code class="xml"><form>
+  <input type="submit" value="Submit!" />
+</form></code></pre>
+              </li>
+            </ul>
+            <p class="fragment">By attaching an event listener and calling <code>preventDefault()</code> on the event object, we can intervene.</p>
+          </section>
+
+
+        <section class="activity" data-background="rgb(6, 116, 123)">
+          <h2>Activity</h2>
+          <p>Preventing a Page Jump</p>
+          <p>&nbsp;</p>
+          <ol>
+            <li>Open your HTML file in Chrome.</li>
+            <li>Scroll down and click on a project with a modal link.</li>
+            <li>Right now, when a modal link is clicked, you are sent to the top of the page and <code>#</code> appears in your page URL. How can we prevent a page jump any time a modal link is clicked?</li>
+          </ol>
+          <p>&nbsp;</p>
+          <p class="info highlight small"><strong>Hint:</strong> Each modal link has a class of <code>modal-link</code></p>
+          <aside class="notes">
+            <ol>
+              <li>Get all of the modal link elements on the page</li>
+              <li>Add a <code>'click'</code> event listener to each modal link element</li>
+            </ol>
+          </aside>
+          
+        </section>
+
+        <section id="modals" data-background="#f05b62">
+          <h2 style="color: #fafafa;font-size:3.7em;">Building our Site's Modals</h2>
+        </section>
+
+        <section>
+            <h2>Modal Plans</h2>
+            <h3>Opening the 'More Details' Modals</h3>
+            
+            <div class="fragment-progression">
+              <div class="fragment">
+                <img src="dist/img/site-before.png" alt="Modal Start">
+              </div>
+              <div class="fragment">
+                <img src="dist/img/site-modal-0.png" alt="The modal-link classes">
+              </div>   
+              <div class="fragment">
+                <img src="dist/img/site-modal-1.png" alt="The data attribute for data-modal which is the same as our modal element's ID">
+              </div> 
+              <div class="fragment">
+                <img src="dist/img/site-modal-2.png" alt="Get the modal element by ID">
+              </div>  
+              <div class="fragment">
+                <img src="dist/img/site-modal-3.png" alt="Add an open class to it">
+              </div> 
+                               
+            </div>
+            <p class="small"><a href="https://s.codepen.io/anythingcodes/debug/PeXvvm/WPkLYNPLOVLM" target="_blank">See it in action &raquo;</a></p>
+            <aside class="notes">
+              <p>A modal is open when it has the .open class. Each .modal-link element has a data-modal attribute, which is the same as the ID of the modal element. Using this data attribute, we need to find the element with that ID and add the open class to it.</p>
+              <ol>
+                <li>Query for the .modal-link elements</li>
+                <li>Add an event listener to modal link when it's clicked</li>
+                <li>Get the corresponding modal ID</li>
+                <li>Find the element with that modal ID</li>
+                <li>Add the open class to it</li>
+                <li>Find the modal close buttons and add an event listener to remove the 'open' class from any modal that has an open class</li>
+              </ol>
+            </aside>
+        </section>
+
+        <section class="activity" data-background="rgb(6, 116, 123)">
+            <h2>Activity</h2>
+            <p>Opening the 'More Details' Modals</p>
+            <p class="small">&nbsp;</p>
+            <ol style="font-size:80%">              
+              
+              <li>Using the <code>data-modal</code> attribute on each modal link, get the ID of its corresponding modal element
+                <p class="small info highlight" style="margin: 0.5em 0;"><strong>Hint:</strong> Use <code>this.getAttribute('attribute-name-here')</code> in your callback function to get the value of that DOM element's attribute, for example:<br /><code>var time = this.getAttribute('data-time');</code></p>
+                <p class="small highlight" style="margin: 0.5em 0;"><strong>Challenge:</strong> Wow, where did <code>this</code> come from? Can you add a breakpoint to determine what the value of <code>this</code> is?</p>                
+              </li>
+              <li>Find the element with the matching ID and add the <code>open</code> class to it. This will style it with the opened modal CSS.
+                <p class="small highlight info" style="margin-top: 0.5em;"><strong>Hint:</strong> To add a class to an element, use <code>myEl.classList.add('class-here')</code>.</p>
+              </li>              
+            </ol>            
+      </section>
+
+      <section>
+        <h2>Hurray! Our modals open!</h2>
+        <p class="fragment">... but how do we close them?</p>
+        <div class="fragment">
+          <img src="dist/img/site-modal-4.png" alt="When the close button is clicked, remove any modal's open class">
+        </div>  
+        <p class="small"><a href="https://s.codepen.io/anythingcodes/debug/PeXvvm/WPkLYNPLOVLM" target="_blank">See it in action &raquo;</a></p>
+
+      </section>
+
+      <section class="activity" data-background="rgb(6, 116, 123)">
+        <h2>Activity</h2>
+        <p>Closing the 'More Details' Modals</p>
+        <p class="small">&nbsp;</p>
+        <ol>
+          <li>Add an event listener to each modal close button. When clicked, each close button should remove the <code>open</code> class from any open modal.
+            <p class="small highlight info" style="margin-top: 0.5em;"><strong>Hint:</strong> To remove a class from an element, use <code>myEl.classList.remove('class-here')</code></p>
+          </li>
+        </ol>           
+       </section>
+
+       <section id="filtering" data-background="#f05b62">
+          <h2 style="color: #fafafa;font-size:3.7em;">Filtering our Site's Projects</h2>
+        </section>
+        
+        <section>
+            <h2>Filtering Plans</h2>
+            <div class="fragment-progression">
+              <div class="fragment">
+                <img src="dist/img/site-before.png" alt="Filtering Start">
+              </div>
+              <div class="fragment">
+                <img src="dist/img/site-filtering-0.png" alt="Filtering Step 0">
+              </div>
+              <div class="fragment">
+                <img src="dist/img/site-filtering-1.png" alt="Filtering Step 1">
+              </div>
+              <div class="fragment">
+                <img src="dist/img/site-filtering-2.png" alt="Filtering Step 2">
+              </div>
+              <div class="fragment">
+                <img src="dist/img/site-filtering-3.png" alt="Filtering Step 3">
+              </div>
+              <div class="fragment">
+                <img src="dist/img/site-filtering-4.png" alt="Filtering Step 4">
+              </div>
+              <div class="fragment">
+                <img src="dist/img/site-filtering-5.png" alt="Filtering Final">
+              </div>
+            </div>
+            <p class="small"><a href="https://s.codepen.io/anythingcodes/debug/PeXvvm/WPkLYNPLOVLM" target="_blank">See it in action &raquo;</a></p>
+
+            <aside class="notes">
+              <p>A project is visible when it has the .active class. By default, all projects have .active -- show students this slowly because the Elements tab may be new for them.</p>
+              <ol>
+                <li>Every project element has .active by default</li>
+                <li>Look for the filters DOM element</li>
+                <li>Attach an event listener to each category DOM element so that, when it's clicked</li>
+                <li>... it loops through each project element in our projects container to see if that element is within that category (we're going to do this with data attributes or, for frameworks like React, you'll be working with objects)</li>
+                <li>If an project doesn't have that category, remove the '.active' class</li>
+                <li>If an element has that category, add the .active class</li>
+                <li>What about if it's zero?</li>
+              </ol>
+            </aside>
+          </section>
+
+          <section class="activity" data-background="rgb(6, 116, 123)">
+            <h2>Activity</h2>
+            <p>Filtering Our Portfolio Projects</p>
+            <p>&nbsp;</p>
+            <ol class="small">
+              <li>Add an event listener to each filter (<code>Web Development</code>, <code>Graphic Design</code>, etc.). Which event type would be best for these filter elements and why?</li>
+              <li>Each time a filter event fires off, loop through the list of projects to see which project has that filter's category.
+                <ul>
+                  <li>If a project <em>doesn't</em> have that filter's category, remove the <code>active</code> class. You can do this with <code>myEl.classList.remove('active');</code></li>
+                  <li>If a project <em>does</em> have that filter's category, add the <code>active</code> class. You can do this with <code>myEl.classList.add('active');</code></li>
+                  <p class="small info highlight" style="margin: 0.5em 0;"><strong>Hint:</strong> You can use <code>getAttribute('attribute-name-here')</code> on a project element, too.</code></p>
+                </ul>                
+              </li>
+              <li>Make sure that all projects are active when the 'All' filter is selected.</li>
+            </ol>
+            
+            <aside class="notes">
+              Mention that this is hard mode!
+            </aside>          
+          </section>
+
+        
+        <section class="activity__challenge" id="challenge" data-background="#d2ccfc">
+            <h2>At-Home Challenge</h2>
+            <h3>Debugging Button Clicks</h3>
+            <p>&nbsp;</p>
+            <p>Check out <a href="https://tinyurl.com/gdi-js-buttons" target="_blank">https://tinyurl.com/gdi-js-buttons</a> for instructions. Solutions will be posted in Slack and in this slide!</p>
+  
+            <aside class="notes">
+              Common interview question!
+            </aside>
+          </section>
+
+          <section id="deploying" data-background="#f05b62">
+            <h2 style="color: #fafafa;font-size:3.7em;">Deploying our site to GitHub</h2>
+          </section>
+
+          <section>
+            <h2>TBA</h2>
+          </section>
+
+          <section id="last" class="hide-pdf">
+              <h2>Questions?</h2>
+              <div style="font-size:1200%; height:100%;" class="blue">?
+                <div class="clear"></div>
+              </div>
+              <aside class="notes">Can always email me!</aside>
+            </section>
+  
+			</div>
+  		
+      <footer>
+          <div class="copyright">
+            Slides at <a href="https://tinyurl.com/gdi-js-slides">https://tinyurl.com/gdi-js-slides</a>&nbsp;
+               &nbsp; | &nbsp;
+               <div class="toc-accordion">
+                  <input type="checkbox" id="toc" />
+                  <label for="toc">Table of Contents</label>
+                  <div class="toc-accordion__contents">
+                    <ol>
+                      <li><a href="#review">Review</a></li>
+                      <li><a href="#event-object">Using the Event Object</a></li>
+                      <li><a href="#modals">Building our Site's Modals</a></li>
+                      <li><a href="#filtering">Filtering our Site's Projects</a></li>
+                      <li><a href="#deploy">Deploying our Site to GitHub</a></li>
+                    </ol>
+                  </div>
+               </div>
+               &nbsp; | &nbsp; &nbsp;<a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+          </div>
+      </footer>
+		</div>
+
+
+		<script src="dist/js/head.min.js"></script>
+		<script src="dist/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+						Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				transition: 'convex', // none/fade/slide/convex/concave/zoom
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+				]
+			});
+
+		</script>
+    <script async src="//production-assets.codepen.io/assets/embed/ei.js"></script>
+	</body>
+</html>
