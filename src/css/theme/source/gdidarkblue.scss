@@ -585,5 +585,11 @@ table.data{
     &:first-of-type {
       position: static;
     }
+  } 
+}
+.solution {
+  display: none;
+  &[data-variant='class1'] {
+    display: inline-block;
   }
 }

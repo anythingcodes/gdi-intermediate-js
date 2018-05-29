@@ -444,7 +444,8 @@ gdiCourse.logCourseName(); // Intermediate JavaScript is level 2</code></li>
 
         <section class="quiz" data-background="rgb(6, 116, 123)">
             <h2>Quiz</h2>
-            <pre><code contenteditable>var ollieTheCat = {
+            <div class="small">
+            <pre class="small"><code class="small" contenteditable>var ollieTheCat = {
   furColor: 'gray',
   age: 2,
   personality: 'wild',
@@ -454,22 +455,22 @@ gdiCourse.logCourseName(); // Intermediate JavaScript is level 2</code></li>
     day: '11',
     year: '2015'
   }
-};</code></pre>
-            <div class="clear small" style="margin-top:0;">
+};</code></pre></div>
+            <div class="clear" style="margin-top:0;">
               <div class="halfblock">
-                <ol class="">
-                  <li class="fragment">How many keys are in the <code>ollieTheCat</code> object?</li>
-                  <li class="fragment">What are the key names?</li>
-                  <li class="fragment">What are the values?</li>
-                  <li class="fragment">What is the value of <code>ollieTheCat.personality</code>?</li>
+                <ol class="small" style="font-size:60%;">
+                  <li class="fragment">How many keys are in <code>ollieTheCat</code>? <span class="orange solution" data-variant="class1">5. The <code>adopted</code> object has 3 of its own keys.</span></li>
+                  <li class="fragment">What are the key names? <span class="orange solution" data-variant="class1">furColor, age, personality, likes, adopted</span></li>
+                  <li class="fragment">What are the values? <span class="orange solution" data-variant="class1">'gray', 2, 'wild', ['catnip', 'food', 'naps', 'cuddles', 'attention'], { month: 'february', day: '11', year: '2015' }</span></li>
+                  <li class="fragment">What is the value of <code>ollieTheCat.personality</code>? <span class="orange solution" data-variant="class1">'wild'</span></li>
+                  <li class="fragment">Name two ways we could get <code>ollieTheCat</code>'s age. <span class="orange solution" data-variant="class1">ollieTheCat.age or ollieTheCat['age']</span></li>
                 </ol>
               </div>
               <div class="halfblock">
-                <ol start="5">
-                  <li class="fragment">Name two ways we could get <code>ollieTheCat</code>'s age.</li>
-                  <li class="fragment">How would we get the 0th index of <code>ollieTheCat</code>'s likes?</li>
-                  <li class="fragment">How would we get the month of <code>ollieTheCat</code>'s adoption?</li>
-                  <li class="fragment">When would we use an object?</li>
+                <ol start="6" class="small" style="font-size:60%;">                  
+                  <li class="fragment">How would we get the 0th index of <code>ollieTheCat</code>'s likes? <span class="orange solution" data-variant="class1">ollieTheCat.likes[0] or ollieTheCat['likes'][0]</span></li>
+                  <li class="fragment">How would we get the month of <code>ollieTheCat</code>'s adoption? <span class="orange solution" data-variant="class1">ollieTheCat.adopted.month or ollieTheCat['adopted']['month'] or a combination or bracket and dot notation</span></li>
+                  <li class="fragment">When would we use an object? <span class="orange solution" data-variant="class1">When managing different data types in a single entity or variable. Objects are the bread and butter of most web applications, as most data is stored in objects, for example <code>var blogPost = { title: 'Learning JavaScript', id: 12345 };</code></span></li>
                 </ol>
               </div>
             </div>
@@ -899,12 +900,13 @@ gdiCourse.logCourseName(); // Intermediate JavaScript is level 2</code></li>
           <section class="activity" data-background="rgb(6, 116, 123)">          
             <h2>Activity</h2>
             <h3>Using Query Methods</h3>
-            <p>&nbsp;</p>
             <p>Check the JS tab in the below CodePen for instructions. We'll do #1 together to get you acclimated!</p>
             <p>&nbsp;</p>
+
             <div style="min-height:265px;">
               <p data-height="265" data-theme-id="0" data-slug-hash="KRLPXV" data-default-tab="js,result" data-user="anythingcodes" data-embed-version="2" data-pen-title="Adding an Event Listener - Before" class="codepen">See the Pen <a href="https://codepen.io/anythingcodes/pen/KRLPXV/">Adding an Event Listener - Before</a> by Liz Shaw (<a href="https://codepen.io/anythingcodes">@anythingcodes</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-            </div>               
+            </div>   
+            <p><a class="solution" data-variant="class1" href="https://codepen.io/anythingcodes/pen/zaYpeJ" target="_blank">View Solution &raquo;</a></p>            
           </section>
           
           <section>
