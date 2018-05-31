@@ -31,6 +31,11 @@ div.halfblock {
   width: 48.75%;
   text-align: left;
   margin-left: 2.5%; }
+  div.halfblock.half-block-reverse {
+    float: right; }
+    div.halfblock.half-block-reverse:first-child {
+      margin-left: 2.5%;
+      margin-right: 0; }
 
 div.halfblock:first-child {
   margin-left: 0; }

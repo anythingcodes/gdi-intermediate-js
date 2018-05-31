@@ -69,64 +69,56 @@
         </section>
 
         <section id="review" data-background="#f05b62">
-					<h2 style="color: #fafafa;font-size:3.7em;">Events Review</h2>
+          <h2 style="color: #fafafa;font-size:3.7em;">Events Review</h2>
+          <h3 style="color: #fafafa;"><em>(included for reference only)</em></h3>
 				</section>
 
         <section>
           <h3>Events Review</h3>
           <p class="small">When someone interacts with your page, how do you control what happens?</p>          
           <div class="clear small">
-            <div class="halfblock">
-              <h4 class="green underlined fragment">You'll need 4 things:</h4>
+            <div class="halfblock fragment">
+              <h4 class="green underlined">You'll need 4 things:</h4>
               <ol>
-                <li class="fragment">The <span class="blue">DOM element</span> you're monitoring</li>                
-                <li class="fragment">A string of <span class="blue">the type of event</span> you're monitoring on this DOM element, such as:
+                <li class="">The <span class="blue">DOM element</span> you're monitoring</li>                
+                <li class="">A string of <span class="blue">the type of event</span> you're monitoring on this DOM element, such as:
                   <ul style="width:100%;">
-                    <li class="fragment">When this link element is <code>'click'</code>ed</li>
-                    <li class="fragment">When this input is <code>'change'</code>d</li>
-                    <li class="fragment">When this window is <code>'scroll'</code>ed</li>
+                    <li class="">When this link element is <code>'click'</code>ed</li>
+                    <li class="">When this input is <code>'change'</code>d</li>
+                    <li class="">When this window is <code>'scroll'</code>ed</li>
                   </ul>
                 </li>
-                <li class="fragment">A <span class="blue">callback function</span>, which happens once this type of event fires off. The callback function contains the code you'd like to run once this event happens.</li>
-                <li class="fragment">The <code>addEventListener()</code> method to bring it all together</li>
+                <li class="">A <span class="blue">callback function</span>, which happens once this type of event fires off. The callback function contains the code you'd like to run once this event happens.</li>
+                <li class="">The <code>addEventListener()</code> method to bring it all together</li>
               </ol>
             </div>
             <div class="halfblock fragment">
               <h4 class="green underlined">Syntax</h4>
               <p class="">Let's say we have a checkbox element in our HTML:</p>
-              <div class="highlight fragment" style="white-space: nowrap;">
+              <div class="highlight" style="white-space: nowrap;">
                 <pre><code class="xml"><input type="checkbox" id="some-unique-id" /></code></pre>
               </div>
               <p>&nbsp;</p>
-              <p class="fragment">We would add an event listener to our JS like so:</p>
+              <p class="">We would add an event listener to our JS like so:</p>
               
-              <div class="highlight fragment">
+              <div class="highlight">
                   <pre><code class="js">myCheckbox.addEventListener('change', function() {
   console.log('The myCheckbox element changed!');
 });</code></pre>
               </div>
               <p>&nbsp;</p>
-              <p class="fragment blue" style="text-align: center;"><strong>But how do we get the <code>myCheckbox</code> DOM element?</strong></p>
+              <p class=" blue" style="text-align: center;"><strong>But how do we get the <code>myCheckbox</code> DOM element?</strong></p>
             </div>
           </div>
           <aside class="notes">
             Ask class what we're overlooking: how to get myCheckbox DOM element.
           </aside>
         </section>
-        
-        <section>
-          <h2>How do we get the DOM element?</h2>
-          <p class="fragment">Use the built-in <code>document</code> object with <span class="blue">query methods</span>!</p>
-          <p class="fragment">You can query elements by ID, class, CSS selector, tag name, and more.</p>
-          <aside class="notes">
-            IDs are fastest. Why you'd never want more than one element with the same ID
-          </aside>
-        </section>
 
         <section>
           <h3>Methods for Querying the DOM</h3>
           
-          <table class="compact data fragment">
+          <table class="compact data">
             <tr>
               <th>Method</th>
               <th>Usage</th>
@@ -146,7 +138,7 @@
               </td>
               <td style="white-space: nowrap;">1 element</td>
             </tr>
-            <tr class="fragment">
+            <tr class="">
                 <td><code>getElementsByClassName()</code></td>
                 <td>
                   <ul>
@@ -181,7 +173,7 @@
                 <th>Returns</th>
               </tr>
 
-              <tr class="fragment">
+              <tr class="">
                   <td><code>getElementsByTagName()</code></td>
                   <td>
                     <ul>
@@ -197,7 +189,7 @@
                   <td style="white-space: nowrap;">Array of elements</td>
                 </tr>
 
-              <tr class="fragment">
+              <tr class="">
                   <td><code>querySelectorAll()</code></td>
                   <td>
                       <ul>
@@ -215,7 +207,7 @@
                   </td>
                   <td style="white-space: nowrap;">Array of elements</td>
                 </tr>
-                <tr class="fragment">
+                <tr class="">
                     <td><code>querySelector()</code></td>
                     <td>
                       <ul>
@@ -235,18 +227,127 @@
                   </tr>
               
               
-  
-              
-             
-
                 
-                <tr class="fragment"><td colspan="3">And much more!</td></tr>
+                <tr class=""><td colspan="3">And much more!</td></tr>
             </table>
   
             <aside class="notes">
               <p>Tons available! Let's take a look at the ones we'll be using.</p>
             </aside>
           </section>
+
+          <section id="scopes" data-background="#f05b62">
+            <h2 style="color: #fafafa;font-size:3.7em;">Scopes</h2>
+          </section>
+
+          <section>
+            <h2>Scopes 🔬</h2>
+            <div class="clear">
+              <div class="halfblock halfblock-reverse">
+                <ol class="small fragment">			
+                  <li>
+                    <strong class="">Function Scopes:<br /><em class="small">SUPPORTED</em> 👍</strong>
+                        
+                    <p>Variables defined inside of a function are <span class="blue">not accessible</span> from the outside scope</p>
+                        <pre class="fragment"><code contenteditable class="javascript">function myFunctionScope() {
+  var a = 'alpha';
+  return a;
+}</code></pre>
+          <pre class="fragment"><code contenteditable class="javascript">console.log(a); // undefined										
+          </code></pre>
+                  </li>
+                  <li class="fragment">
+                    <strong class="">Block Scopes (a.k.a. lexical scopes):<br /><em class="small">NOT SUPPORTED</em> 👎</strong>
+                    <p>Any variables declared within <code>{ }</code> are <span class="blue">accessible only within the <code>{ }</code></span></p>
+                          <pre><code contenteditable class="javascript">var myBlockScope = true;
+if (myBlockScope) {
+  var z = 'zeta';
+}</code></pre>
+          <pre class="fragment"><code contenteditable class="javascript">console.log(z); // 'zeta'										
+            </code></pre>
+                  </li>
+                </ol>
+              </div>
+              <div class="halfblock halfblock-reverse">
+                
+                <div class="fragment" style="text-align: center;">
+                  <p>
+                    <img class="" src="dist/img/wait-what.gif" alt="Wait what?" />				
+                  </p>
+                  <p>What is going on here?!</p>
+                </div>
+                <p class="fragment" style="margin-top:1em;">In JavaScript, <span class="blue">block scope is ignored</span>. JS only respects function scope.</p>
+              </div>
+            </div>
+          
+            <div class="fragment small">
+              <p><a href="https://codepen.io/anythingcodes/pen/ooxdPG?editors=0010" target="_blank">CodePen Example &raquo;</a></p>
+              <p class="info"><a href="https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch3.md" target="_blank">Article: Function vs. Block Scope &raquo;</a></p>
+            </div>
+            
+            <aside class="notes">
+               Most languages use block scopes. This made programming in JavaScript unintuitive and inconsistent for many who were used to block scoping.
+  
+              <ul>
+                <li>What would the first console.log output? firstVariable is not defined</li>
+                <li>What would the second console.log output? zeta</li>
+                <li>Ask for block scope examples, e.g. <code>{ }</code>, <code>if () { }</code>, <code>for() {}</code>, <code>while() { }</code>, etc.</li><li></li>
+                <li>A <strong>function</strong> cordons off an area. Plain old <code>{}</code> does not. Any variables defined in a function remain scoped there, and aren't accessible outside.</li>
+                <li>When you see the word <strong>function</strong>, it should trigger the fact that a new scope/context has been created. Any variables defined there are scoped to that area.</li>
+              </ul>
+            </aside>
+          </section>
+  
+          <section>
+            <h2>Closures</h2>
+            <p class="fragment small">
+              Closures use functions to <span class="orange">scope your code</span> and prevent your variables from being accessed and/or overwritten outside of the closure. They are <span class="blue">immediately-invoked function expressions</span> (<span class="blue">IIFEs</span>).
+            </p>
+
+            <div class="clear">
+              <div class="halfblock">
+                <h4 class="green underlined fragment">Making a Closure</h4>
+                <div class="fragment-progression">
+                  <pre class="fragment xml"><code>
+function () {
+
+}
+                  </code></pre>
+                  <pre class="fragment xml"><code>
+(function () {
+    
+})
+                  </code></pre>
+                  <pre class="fragment xml"><code>
+(function () {
+        
+})(); // invoked!
+                  </code></pre>
+                  <pre class="fragment xml"><code>
+(function (param) {
+
+})(param);
+</code></pre>
+                    
+                  <p class="info small fragment">Just like regular functions, you can call a closure with parameters.</p>
+                </div>
+              
+              </div>
+              <div class="halfblock fragment">
+                <h4 class="green underlined">OK, but why?</h4>
+                <p><img style="max-width: 100%;" src="dist/img/why.gif" alt="Why though?" /></p>
+                <p class="fragment"><a href="activities/closures" target="_blank">Let's check it out &raquo;</a></p>
+              </div>
+            </div>
+                        
+            <aside class="notes">
+              A common interview question. Essentially happening because there's only one <code>i</code> in the outer scope that was closed over, instead of a new <code>i</code> for each iteration's function to close over.
+            </aside>				
+          </section>
+
+          <!-- <section>
+            <h2>The <code>this</code> keyword</h2>
+          </section> -->
 
           <section id="event-object" data-background="#f05b62">
             <h2 style="color: #fafafa;font-size:3.7em;">Using the Event Object</h2>
@@ -298,7 +399,7 @@ myLink.addEventListener('click', function(e) {
           <p>Preventing a Page Jump</p>
           <p>&nbsp;</p>
           <ol>
-            <li>Open your HTML file in Chrome.</li>
+            <li>Open your project's HTML file in Chrome.</li>
             <li>Scroll down and click on a project with a modal link.</li>
             <li>Right now, when a modal link is clicked, you are sent to the top of the page and <code>#</code> appears in your page URL. How can we prevent a page jump any time a modal link is clicked?</li>
           </ol>
@@ -456,33 +557,60 @@ myLink.addEventListener('click', function(e) {
             </aside>          
           </section>
 
-        
-        <section class="activity__challenge" id="challenge" data-background="#d2ccfc">
-            <h2>At-Home Challenge</h2>
-            <h3>Debugging Button Clicks</h3>
-            <p>&nbsp;</p>
-            <p>Check out <a href="https://tinyurl.com/gdi-js-buttons" target="_blank">https://tinyurl.com/gdi-js-buttons</a> for instructions. Solutions will be posted in Slack and in this slide!</p>
-  
-            <aside class="notes">
-              Common interview question!
-            </aside>
-          </section>
-
+    
           <section id="deploying" data-background="#f05b62">
             <h2 style="color: #fafafa;font-size:3.7em;">Deploying our site to GitHub</h2>
           </section>
 
           <section>
-            <h2>Coming Soon 🙃</h2>
-          </section>
+            <h3>Deploying Our Site</h2>
+      
+            <p class="fragment"><a href="http://github.com" target="_blank">GitHub</a> is <span class="orange">free</span> and a great intro to <span class="orange">version control</span></p>
+            <p class="fragment">A <span class="orange">version control system</span> records changes to a file or set of files over time so that you can keep track of changes and roll back to previous revisions</p>
+            <p class="fragment blue">Almost every web agency uses a version control system</p>
+            <p class="fragment"><br /><a href="http://anything.codes">http://anything.codes</a> is hosted for free on GitHub! <a href="https://github.com/anythingcodes/anythingcodes.github.io" target="_blank">See?</a></p>
+            </section>
+    
+            <!-- GitHub -->
+            <section>
+              <h3>Deploying Our Site</h3>
+              <ol style="font-size:85%;line-height:1.3;">
+                <li class="fragment">Create an account on <a href="http://github.com" target="_blank">GitHub.com</a></li>
+                <li class="fragment"><a href="https://desktop.github.com/" target="_blank">Download GitHub Desktop</a>, then open it and login</li>
+                <li class="fragment"><img src="dist/img/GitHub-add-repository.png" alt="Adding a repository" style="float:right;max-width:50%;"/>Click the plus sign and, under the <em>Add</em> tab, browse to the <span class="orange">project</span> folder you used for this class</li>
+                <li class="fragment">An error message will display; click <span class="blue">create a repository</span></li>
+                <li class="fragment"><img src="dist/img/GitHub-create.png" alt="The create repo screen"  style="float:right;max-width:50%;" />Change the <em>Name</em> to <span class="orange"><em>yourusername</em>.github.io</span> (substitute <em>yourusername</em> with your GitHub username)</li>
+                <li class="fragment">Click <span class="blue">Create repository</span> (Don't worry about changing <em>Local path</em> or <em>Git ignore</em>)</li>
+              </ol>
+            </section>
+            <section>
+              <h3>Deploying Our Site</h3>
+              <ol style="font-size:80%;line-height:1.3;" start="7">
+                <li class="fragment">Click <em>Changes</em>, where you should see a list of project files.</li>
+                <li class="fragment">Enter a <em>Summary</em> and click <span class="blue">Commit to master</span><br /><img src="dist/img/GitHub-commit.png" alt="Committing changes to GitHub"/></li>
+              </ol>
+            </section>
+            <section>
+              <h3>Deploying Our Site</h3>
+              <ol style="font-size:80%;line-height:1.3;" start="9">
+                <li class="fragment"><img src="dist/img/GitHub-publish-screen.png" alt="The publish menu" style="float:right;max-width:50%;" />Click <em>Publish</em> at the top, making sure <em>Name</em> is in the correct format (<span class="orange"><em>yourusername</em>.github.io</span>, except with your username)</li>
+                <li class="fragment">Within a few minutes, your site will be live at <span class="blue">http://<em>yourusername</em>.github.io</span> (substituting your GitHub username for <em>yourusername</em>). Check it out!</li>
+                <li class="fragment">Any time you make changes to your project files, open GitHub Desktop, <em>Commit</em> (step 8) and then click the <img src="dist/img/GitHub-sync.png" style="border:none;box-shadow:none;margin:0;" /> button to publish your changes.</li>
+              </ol>
+              <div class="fragment" style="font-size:75%;line-height:1.3;">
+                <p class="blue">More info:</p>
+                <p><a href="https://pages.github.com/" target="_blank">GitHub Documentation &raquo;</a></p>
+                <p><a href="https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/" target="_blank">Setting up a domain (like http://anything.codes) with GitHub &raquo;</a></p>
+              </div>
+            </section>
 
           <section id="last" class="hide-pdf">
-              <h2>Questions?</h2>
-              <div style="font-size:1200%; height:100%;" class="blue">?
-                <div class="clear"></div>
-              </div>
-              <aside class="notes">Can always email me!</aside>
-            </section>
+            <h2>Questions?</h2>
+            <div style="font-size:1200%; height:100%;" class="blue">?
+              <div class="clear"></div>
+            </div>
+            <aside class="notes">Can always email me!</aside>
+          </section>
   
 			</div>
   		
@@ -499,7 +627,6 @@ myLink.addEventListener('click', function(e) {
                       <li><a href="#event-object">Using the Event Object</a></li>
                       <li><a href="#modals">Building our Site's Modals</a></li>
                       <li><a href="#filtering">Filtering our Site's Projects</a></li>
-                      <li><a href="#challenge">At-Home Challenge</a></li>
                       <li><a href="#deploying">Deploying our Site to GitHub</a></li>
                     </ol>
                   </div>
